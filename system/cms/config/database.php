@@ -37,7 +37,7 @@ $db[PYRO_DEVELOPMENT] = array(
 	'username'		=> 	$_SERVER['DB1_USER'],
 	'password'		=> 	$_SERVER['DB1_PASS'],
 	'database'		=> 	$_SERVER['DB1_NAME'],
-	'dbdriver' 		=> 	'mysql',
+	'dbdriver' 		=> 	'mysqli',
 	'dbprefix' 		=>	'',
 	'active_r' 		=>	TRUE,
 	'pconnect' 		=>	FALSE,
@@ -51,23 +51,20 @@ $db[PYRO_DEVELOPMENT] = array(
 	'stricton' 		=> TRUE,
 );
 
-// Staging
-/*
 $db[PYRO_STAGING] = array(
-	'hostname'		=> 	'',
-	'username'		=> 	'',
-	'password'		=> 	'',
-	'database'		=> 	'pyrocms',
-	'dbdriver' 		=> 	'mysql',
+	'hostname'		=> 	$_SERVER['DB1_HOST'],
+	'username'		=> 	$_SERVER['DB1_USER'],
+	'password'		=> 	$_SERVER['DB1_PASS'],
+	'database'		=> 	$_SERVER['DB1_NAME'],
+	'dbdriver' 		=> 	'mysqli',
 	'active_r' 		=>	TRUE,
 	'pconnect' 		=>	FALSE,
 	'db_debug' 		=>	FALSE,
 	'cache_on' 		=>	FALSE,
 	'char_set' 		=>	'utf8',
 	'dbcollat' 		=>	'utf8_unicode_ci',
-	'port' 	 		=>	3306,
+	'port' 	 		=>	$_SERVER['DB1_PORT'],
 );
-*/
 
 // Production
 $db[PYRO_PRODUCTION] = array(
@@ -75,7 +72,7 @@ $db[PYRO_PRODUCTION] = array(
 	'username'		=> 	$_SERVER['DB1_USER'],
 	'password'		=> 	$_SERVER['DB1_PASS'],
 	'database'		=> 	$_SERVER['DB1_NAME'],
-	'dbdriver' 		=> 	'mysql',
+	'dbdriver' 		=> 	'mysqli',
 	'active_r' 		=>	TRUE,
 	'pconnect' 		=>	FALSE,
 	'db_debug' 		=>	FALSE,
