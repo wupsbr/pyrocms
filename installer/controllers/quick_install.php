@@ -65,4 +65,13 @@ class Quick_install extends CI_Controller
 	}
 }
 
+// This is for using the the settings
+// library in PyroCMS when installing. This is a
+// copy of the function that exists in
+// system/cms/core/My_Controller.php
+function ci()
+{
+	return get_instance();
+}
+
 /* End of file installer.php */
