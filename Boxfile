@@ -2,7 +2,7 @@ web1:
   name: 'pyrocms'
 
   # Directories specified here are not managed by Git but rather via SSH or the PyroCMS interface
-  shared_writable_dirs: [/system/cms/cache, /system/cms/logs, /uploads, /addons]
+  shared_writable_dirs: [/system/cms/cache, /system/cms/logs, /uploads, /addons, /assets]
 
 
   # PHP Config Overrides

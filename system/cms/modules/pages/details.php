@@ -229,7 +229,7 @@ class Module_Pages extends Module {
 			array(
 				'slug' => 'default',
 				'page_id' => 1,
-				'body' => '<p>Welcome to our homepage. We have not quite finished setting up our website yet, but please add us to your bookmarks and come back soon.</p>',
+				'body' => '<p>Congratulations! You have successfully set up your Pagoda Box Quick Install instance. You may log in using "<strong>default@site.com</strong>" and "<strong>password</strong>". As soon as you are logged in go to <a href="{{ url:site }}edit-profile">Edit Profile</a> to change your user information.</p><p>Next, delete the installer folder and your site will be ready for traffic.</p>',
 				'parsed' => '',
 				'type' => 'wysiwyg-advanced',
 				'sort' => 1,
