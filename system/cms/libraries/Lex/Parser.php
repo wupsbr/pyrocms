@@ -377,7 +377,7 @@ class Lex_Parser
 				{
 					$text = $this->parse_recursives($text, $orig_text, $callback);
 				}
-				$count++;
+				++$count;
 			}
 		}
 		return $text;
