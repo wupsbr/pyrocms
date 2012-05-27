@@ -9,7 +9,3 @@ before_script:
   - php composer.phar install
 
 script: phpunit --coverage-text --configuration tests/travis/pyrocms/pyrocms.phpunit.xml
-
-branches:
-  only:
-    - feature/unit-tests
