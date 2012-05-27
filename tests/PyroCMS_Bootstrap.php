@@ -7,6 +7,7 @@ define('EXT', '.php');
 define('PYRO_DEVELOPMENT', 'development');
 define('PYRO_STAGING', 'staging');
 define('PYRO_PRODUCTION', 'production');
+define('ENVIRONMENT', 'testing');
 
 define('PROJECT_BASE',		realpath($dir.'/../').'/');
 define('BASEPATH',			PROJECT_BASE.'system/codeigniter/');
@@ -21,6 +22,11 @@ define('ADDONPATH', 		ADDON_FOLDER.SITE_REF.'/');
 define('SHARED_ADDONPATH', 	ADDON_FOLDER.'shared_addons/');
 define('FCPATH', 			PROJECT_BASE);
 
+// Set SERVER environment
+$_SERVER['SERVER_NAME'] = 'localhost';
+$_SERVER['REQUEST_URI'] = '/';
+
 unset($dir);
 
+// Include the CodeIgniter bootstrap
 include PROJECT_BASE.'tests'.DIRECTORY_SEPARATOR.'Bootstrap'.EXT;
