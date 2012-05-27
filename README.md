@@ -1,4 +1,5 @@
-# PyroCMS Community Edition [![Build Status](https://secure.travis-ci.org/pyrocms/pyrocms.png?branch=feature/unit-tests)](http://travis-ci.org/pyrocms/pyrocms)
+[![Build Status](https://secure.travis-ci.org/pyrocms/pyrocms.png?branch=feature/unit-tests)](http://travis-ci.org/pyrocms/pyrocms)
+# PyroCMS Community Edition 
 
 * [Website](http://pyrocms.com/)
 * [Documentation](http://pyrocms.com/docs)
