@@ -20,6 +20,11 @@
 	<filter>
         <whitelist addUncoveredFilesFromWhitelist="true">
             <directory suffix=".php">../../../system</directory>
+            <exclude>
+	            <directory suffix=".php">../../../system/codeigniter</directory>
+	            <directory suffix=".php">../../../system/cms</directory>
+	            <directory suffix=".php">../../../system/sparks</directory>
+            </exclude>
         </whitelist>
 	</filter>
 </phpunit>

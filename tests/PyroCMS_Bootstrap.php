@@ -26,7 +26,13 @@ define('FCPATH', 			PROJECT_BASE);
 $_SERVER['SERVER_NAME'] = 'localhost';
 $_SERVER['REQUEST_URI'] = '/';
 
+// Include Pyro Core Mock classes
+include_once $dir.'/mocks/pyrocms/core/common.php';
+include_once $dir.'/mocks/pyrocms/autoloader.php';
+
 unset($dir);
+
+spl_autoload_register('pyrocms_autoload');
 
 // Include the CodeIgniter bootstrap
 include PROJECT_BASE.'tests'.DIRECTORY_SEPARATOR.'Bootstrap'.EXT;
