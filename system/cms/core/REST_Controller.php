@@ -369,11 +369,11 @@ class REST_Controller extends MY_Controller
 			}
 		}
 
-		header('HTTP/1.1: '.$http_code);
-		header('Status: '.$http_code);
-		header('Content-Length: '.strlen($output));
+		defined('STDIN') OR header('HTTP/1.1: '.$http_code);
+		defined('STDIN') OR header('Status: '.$http_code);
+		defined('STDIN') OR header('Content-Length: '.strlen($output));
 
-		exit($output);
+		defined('STDIN') OR exit($output);
 	}
 
 	/**

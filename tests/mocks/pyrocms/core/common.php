@@ -36,6 +36,33 @@ if ( ! function_exists('redirect'))
 
 // --------------------------------------------------------------------
 
+if ( ! function_exists('site_url'))
+{
+	function site_url() {
+		return 'http://localhost';
+	}
+}
+
+// --------------------------------------------------------------------
+
+if ( ! function_exists('uri_string'))
+{
+	function uri_string() {
+		return 'blog';
+	}
+}
+
+// --------------------------------------------------------------------
+
+if ( ! function_exists('anchor'))
+{
+	function anchor($uri_segments = '', $text = '', $attributes = array()) {
+		return $text;
+	}
+}
+
+// --------------------------------------------------------------------
+
 if ( ! function_exists('lang'))
 {
 	function lang($item) {
@@ -43,54 +70,12 @@ if ( ! function_exists('lang'))
 	}
 }
 
-
 // --------------------------------------------------------------------
 
-if ( ! class_exists('MX_Controller'))
+if ( ! function_exists('module_exists'))
 {
-	class MX_Controller {
-
-		public $benchmark;
-		
-		function __construct()
-		{
-			$this->benchmark = new Mock_Core_Benchmark();
-
-			$config = Mock_Database_DB::config(DB_DRIVER);
-			$connection = new Mock_Database_DB($config);
-			$this->db = Mock_Database_DB::DB($connection->set_dsn(DB_DRIVER), TRUE);
-
-			// Set module flag
-			if (isset(PyroCMS_TestCase::instance()->enable_modules))
-			{
-				$this->module_m = new Pyro_Mock();
-				$this->module_m->get = function() {
-					return array(
-						'enabled' => TRUE,
-						'skip_xss' => FALSE,
-					);
-				};
-			}
-
-			// Set REST Properties
-			if (isset(PyroCMS_TestCase::instance()->enable_restful))
-			{
-				$this->request = new Pyro_Mock();
-				$this->response = new Pyro_Mock();
-				$this->rest = new Pyro_Mock();
-			}
-		}
-
-		function __get($prop)
-		{
-			if (isset(PyroCMS_TestCase::instance()->$prop))
-			{
-				return PyroCMS_TestCase::instance()->$prop;
-			}
-
-			return new Pyro_Mock();
-		}
-
+	function module_exists($module) {
+		return (bool) isset(PyroCMS_TestCase::instance()->$module);
 	}
 }
 
@@ -99,6 +84,8 @@ if ( ! class_exists('MX_Controller'))
 if ( ! class_exists('Pyro_Mock'))
 {
 	class Pyro_Mock {
+
+		public static $container = array();
 
 		function __get($prop)
 		{
@@ -120,10 +107,16 @@ if ( ! class_exists('Pyro_Mock'))
 		static function __callStatic($method, $args)
 		{
 			$my_name = __CLASS__;
+			$first_param = current($args);
 
-			if (isset($my_name::$method) && $my_name::$method instanceof Closure)
+			if (isset($my_name::$container[$method.'.'.$first_param]) 
+			    && $my_name::$container[$method.'.'.$first_param] instanceof Closure)
 			{
-				return call_user_func_array(array($my_name, $method), $args);
+				return call_user_func_array($my_name::$container[$method.'.'.$first_param], $args);
+			}
+			elseif (isset($my_name::$container[$method]) && $my_name::$container[$method] instanceof Closure)
+			{
+				return call_user_func_array($my_name::$container[$method], $args);
 			}
 			else
 			{
@@ -132,10 +125,77 @@ if ( ! class_exists('Pyro_Mock'))
 		}
 	}
 
-	class Settings extends Pyro_Mock {}
-
-	class Events extends Pyro_Mock {}
 }
 
+// --------------------------------------------------------------------
+
+if ( ! function_exists('pyro_class'))
+{
+	function pyro_class($name = '')
+	{
+		if ($name == 'MX_Controller' && ! class_exists('MX_Controller'))
+		{
+			class MX_Controller {
+
+				public $benchmark;
+				
+				function __construct()
+				{
+					$this->benchmark = new Mock_Core_Benchmark();
+
+					$config = Mock_Database_DB::config(DB_DRIVER);
+					$connection = new Mock_Database_DB($config);
+					$this->db = Mock_Database_DB::DB($connection->set_dsn(DB_DRIVER), TRUE);
+
+					// Set module flag
+					if (isset(PyroCMS_TestCase::instance()->enable_modules))
+					{
+						$module_details = isset(PyroCMS_TestCase::instance()->module_details) 
+						                  ? PyroCMS_TestCase::instance()->module_details : array();
+
+						$this->module_m = new Pyro_Mock();
+						$this->module_m->get = function() use($module_details) {
+							return ( ! empty($module_details)) ? $module_details : array(
+								'enabled' => TRUE,
+								'skip_xss' => FALSE,
+							);
+						};
+					}
+
+					// Set REST Properties
+					if (isset(PyroCMS_TestCase::instance()->enable_restful))
+					{
+						$this->request = new Pyro_Mock();
+						$this->response = new Pyro_Mock();
+						$this->rest = new Pyro_Mock();
+					}
+				}
+
+				function __get($prop)
+				{
+					if (isset(PyroCMS_TestCase::instance()->$prop))
+					{
+						return PyroCMS_TestCase::instance()->$prop;
+					}
+
+					return new Pyro_Mock();
+				}
+
+			}
+		}
+		elseif ($name == 'Settings' && ! class_exists('Settings'))
+		{
+			class Settings extends Pyro_Mock {}
+		}
+		elseif ($name == 'Events' && ! class_exists('Events'))
+		{
+			class Events extends Pyro_Mock {}
+		}
+		elseif ($name == 'Asset' && ! class_exists('Asset'))
+		{
+			class Asset extends Pyro_Mock {}
+		}
+	}
+}
 
 // EOF

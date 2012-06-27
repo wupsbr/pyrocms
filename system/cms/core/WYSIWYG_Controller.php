@@ -18,6 +18,7 @@ class WYSIWYG_Controller extends MY_Controller
 		parent::__construct();
 
 		// Not an admin and not allowed to see files
+		// @codeCoverageIgnoreStart
 		if ($this->current_user AND
 			$this->current_user->group !== 'admin' AND 
 			isset($this->permissions['files']) AND
@@ -26,14 +27,12 @@ class WYSIWYG_Controller extends MY_Controller
 			$this->load->language('files/files');
 			show_error(lang('files:no_permissions'));
 		}
+		// @codeCoverageIgnoreEnd
 
 		ci()->admin_theme = $this->theme_m->get_admin();
 
 		// Using a bad slug? Weak
-		if (empty($this->admin_theme->slug))
-		{
-			show_error('This site has been set to use an admin theme that does not exist.');
-		}
+		if (empty($this->admin_theme->slug)) show_error('This site has been set to use an admin theme that does not exist.');
 
 		// Make a constant as this is used in a lot of places
 		defined('ADMIN_THEME') or define('ADMIN_THEME', $this->admin_theme->slug);
@@ -59,5 +58,4 @@ class WYSIWYG_Controller extends MY_Controller
 			->append_js('jquery/jquery-ui.min.js')
 			->append_js('module::wysiwyg.js');
 	}
-
 }

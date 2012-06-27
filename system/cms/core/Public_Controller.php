@@ -18,6 +18,7 @@ class Public_Controller extends MY_Controller
 		$this->benchmark->mark('public_controller_start');
 
 		// Check redirects if GET and Not AJAX
+		// @codeCoverageIgnoreStart
 		if ( ! $this->input->is_ajax_request() AND $_SERVER['REQUEST_METHOD'] == 'GET')
 		{
 			$this->load->model('redirects/redirect_m');
@@ -37,14 +38,17 @@ class Public_Controller extends MY_Controller
 					$from = str_replace('%', '(.*?)', $redirect->from);
 					$redirect->to = preg_replace('#^'.$from.'$#', $redirect->to, $uri);
 				}
+
 				// Redirect with wanted redirect header type
 				redirect($redirect->to, 'location', $redirect->type);
 			}
 		}
+		// @codeCoverageIgnoreEnd
 
 		Events::trigger('public_controller');
 
 		// Check the frontend hasnt been disabled by an admin
+		// @codeCoverageIgnoreStart
 		if ( ! $this->settings->frontend_enabled && (empty($this->current_user) OR $this->current_user->group != 'admin'))
 		{
 			defined('STDIN') OR header('Retry-After: 600');
@@ -52,6 +56,7 @@ class Public_Controller extends MY_Controller
 			$error = $this->settings->unavailable_message ? $this->settings->unavailable_message : lang('cms_fatal_error');
 			show_error($error, 503);
 		}
+		// @codeCoverageIgnoreEnd
 
 		// -- Navigation menu -----------------------------------
 		$this->load->model('pages/page_m');
@@ -59,10 +64,7 @@ class Public_Controller extends MY_Controller
 		// Load the current theme so we can set the assets right away
 		ci()->theme = $this->theme_m->get();
 
-		if (empty($this->theme->slug))
-		{
-			show_error('This site has been set to use a theme that does not exist. If you are an administrator please '.anchor('admin/themes', 'change the theme').'.');
-		}
+		if (empty($this->theme->slug)) show_error('This site has been set to use a theme that does not exist. If you are an administrator please '.anchor('admin/themes', 'change the theme').'.');
 
 		// Set the theme as a path for Asset library
 		Asset::add_path('theme', $this->theme->path.'/');
@@ -86,6 +88,7 @@ class Public_Controller extends MY_Controller
 					var BASE_URI = "'.BASE_URI.'";
 				</script>');
 
+		// @codeCoverageIgnoreStart
 		// Is there a layout file for this module?
 		if ($this->template->layout_exists($this->module.'.html'))
 		{
@@ -97,6 +100,7 @@ class Public_Controller extends MY_Controller
 		{
 			$this->template->set_layout('default.html');
 		}
+		// @codeCoverageIgnoreEnd
 
 		// Make sure whatever page the user loads it by, its telling search robots the correct formatted URL
 		$this->template->set_metadata('canonical', site_url($this->uri->uri_string()), 'link');

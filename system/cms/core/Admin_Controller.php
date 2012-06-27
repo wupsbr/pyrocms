@@ -29,6 +29,7 @@ class Admin_Controller extends MY_Controller {
 		$this->lang->load('buttons');
 		
 		// Show error and exit if the user does not have sufficient permissions
+		// @codeCoverageIgnoreStart
 		if ( ! self::_check_access())
 		{
 			$this->session->set_flashdata('error', lang('cp_access_denied'));
@@ -40,17 +41,15 @@ class Admin_Controller extends MY_Controller {
 		{
 			redirect(str_replace('http:', 'https:', current_url()).'?session='.session_id());
 		}
+		// @codeCoverageIgnoreEnd
 
 		$this->load->helper('admin_theme');
 		
 		ci()->admin_theme = $this->theme_m->get_admin();
 		
 		// Using a bad slug? Weak
-		if (empty($this->admin_theme->slug))
-		{
-			show_error('This site has been set to use an admin theme that does not exist.');
-		}
-
+		if (empty($this->admin_theme->slug)) show_error('This site has been set to use an admin theme that does not exist.');
+		
 		// make a constant as this is used in a lot of places
 		defined('ADMIN_THEME') or define('ADMIN_THEME', $this->admin_theme->slug);
 			
@@ -95,10 +94,7 @@ class Admin_Controller extends MY_Controller {
 			return TRUE;
 		}
 
-		if ( ! $this->current_user)
-		{
-			redirect('admin/login');
-		}
+		if ( ! $this->current_user) redirect('admin/login');
 
 		// Admins can go straight in
 		if ($this->current_user->group === 'admin')
@@ -120,7 +116,8 @@ class Admin_Controller extends MY_Controller {
 		}
 
 		// god knows what this is... erm...
+		// @codeCoverageIgnoreStart
 		return FALSE;
+		// @codeCoverageIgnoreEnd
 	}
-
 }

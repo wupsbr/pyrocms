@@ -47,10 +47,12 @@ class MY_Controller extends MX_Controller
 		$this->benchmark->mark('my_controller_start');
 		
 		// No record? Probably DNS'ed but not added to multisite
+		// @codeCoverageIgnoreStart
 		if ( ! defined('SITE_REF'))
 		{
 			show_error('This domain is not set up correctly. Please go to '.anchor('sites') .' and log in to add this site.');
 		}
+		// @codeCoverageIgnoreEnd
 
 		// By changing the prefix we are essentially "namespacing" each site
 		$this->db->set_dbprefix(SITE_REF.'_');
@@ -64,13 +66,10 @@ class MY_Controller extends MX_Controller
 		// Migration logic helps to make sure PyroCMS is running the latest changes
 		$this->load->library('migration');
 
-		if ( ! ($schema_version = $this->migration->current()))
-		{
-			show_error($this->migration->error_string());
-		}
+		if ( ! ($schema_version = $this->migration->current())) show_error($this->migration->error_string());
 
 		// Result of schema version migration
-		else if (is_numeric($schema_version))
+		if (is_numeric($schema_version))
 		{
 			log_message('debug', 'PyroCMS was migrated to version: ' . $schema_version);
 		}
@@ -94,7 +93,7 @@ class MY_Controller extends MX_Controller
 		}
 
 		// What language us being used
-		defined('CURRENT_LANGUAGE') or define('CURRENT_LANGUAGE', $site_lang);
+		defined('CURRENT_LANGUAGE') OR define('CURRENT_LANGUAGE', $site_lang);
 
 		$langs = $this->config->item('supported_languages');
 
@@ -112,6 +111,7 @@ class MY_Controller extends MX_Controller
 		}
 
 		// Reload languages
+		// @codeCoverageIgnoreStart
 		if (AUTO_LANGUAGE !== CURRENT_LANGUAGE)
 		{
 			$this->config->set_item('language', $langs[CURRENT_LANGUAGE]['folder']);
@@ -122,6 +122,7 @@ class MY_Controller extends MX_Controller
 		{
 			$this->lang->load(array('global', 'users/user', 'files/files'));
 		}
+		// @codeCoverageIgnoreEnd
 
 		$this->load->library(array('events', 'users/ion_auth'));
 

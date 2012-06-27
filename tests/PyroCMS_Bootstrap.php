@@ -24,6 +24,8 @@ define('FCPATH', 			PROJECT_BASE);
 
 defined('DB_DRIVER') or define('DB_DRIVER', 'mysql');
 defined('AUTO_LANGUAGE') or define('AUTO_LANGUAGE', 'en');
+defined('APPPATH_URI') or define('APPPATH_URI', 'http://localhost');
+defined('BASE_URI') or define('BASE_URI', 'http://localhost');
 
 // Set SERVER environment
 $_SERVER['SERVER_NAME'] = 'localhost';
