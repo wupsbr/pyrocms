@@ -19,7 +19,11 @@ function pyrocms_autoload($class)
 		'Public_Controller', 'REST_Controller', 'WYSIWYG_Controller'
 	);
 
-	if (in_array($class, $pyro_cms_core))
+	if ($class == 'PyroCMS_TestCase')
+	{
+		include_once(__DIR__.DIRECTORY_SEPARATOR.'testcase.php');
+	}
+	elseif (in_array($class, $pyro_cms_core))
 	{
 		$dir = APPPATH.'core'.DIRECTORY_SEPARATOR;
 

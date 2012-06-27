@@ -75,10 +75,15 @@ function autoload($class)
 	{
 		$trace = debug_backtrace();
 
-		// If the autoload call came from `class_exists` or `file_exists`, 
-		// we skipped and return FALSE
 		if ($trace[2]['function'] == 'class_exists' OR $trace[2]['function'] == 'file_exists')
 		{
+			// If the autoload call came from `class_exists` or `file_exists`, 
+			// we skipped and return FALSE
+			return FALSE;
+		}
+		elseif (($autoloader = spl_autoload_functions()) && end($autoloader) !== __FUNCTION__)
+		{
+			// If there was other custom autoloader, passed away
 			return FALSE;
 		}
 		

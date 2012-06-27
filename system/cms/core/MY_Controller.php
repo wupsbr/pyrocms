@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
 
-require APPPATH."libraries/MX/Controller.php";
+class_exists('MX_Controller') OR require APPPATH."libraries/MX/Controller.php";
 
 /**
  * Code here is run before ALL controllers
@@ -63,7 +63,7 @@ class MY_Controller extends MX_Controller
 
 		// Migration logic helps to make sure PyroCMS is running the latest changes
 		$this->load->library('migration');
-		
+
 		if ( ! ($schema_version = $this->migration->current()))
 		{
 			show_error($this->migration->error_string());

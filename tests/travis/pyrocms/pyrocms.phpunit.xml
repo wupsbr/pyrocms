@@ -18,13 +18,8 @@
 		</testsuite>
 	</testsuites>
 	<filter>
-        <whitelist addUncoveredFilesFromWhitelist="true">
-            <directory suffix=".php">../../../system</directory>
-            <exclude>
-	            <directory suffix=".php">../../../system/codeigniter</directory>
-	            <directory suffix=".php">../../../system/cms</directory>
-	            <directory suffix=".php">../../../system/sparks</directory>
-            </exclude>
+        <whitelist addUncoveredFilesFromWhitelist="false">
+            <directory suffix=".php">../../../system/cms/core</directory>
         </whitelist>
 	</filter>
 </phpunit>

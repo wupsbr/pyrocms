@@ -22,6 +22,9 @@ define('ADDONPATH', 		ADDON_FOLDER.SITE_REF.'/');
 define('SHARED_ADDONPATH', 	ADDON_FOLDER.'shared_addons/');
 define('FCPATH', 			PROJECT_BASE);
 
+defined('DB_DRIVER') or define('DB_DRIVER', 'mysql');
+defined('AUTO_LANGUAGE') or define('AUTO_LANGUAGE', 'en');
+
 // Set SERVER environment
 $_SERVER['SERVER_NAME'] = 'localhost';
 $_SERVER['REQUEST_URI'] = '/';
@@ -32,7 +35,8 @@ include_once $dir.'/mocks/pyrocms/autoloader.php';
 
 unset($dir);
 
-spl_autoload_register('pyrocms_autoload');
-
 // Include the CodeIgniter bootstrap
 include PROJECT_BASE.'tests'.DIRECTORY_SEPARATOR.'Bootstrap'.EXT;
+
+// Set Pyro autoloader
+spl_autoload_register('pyrocms_autoload');
