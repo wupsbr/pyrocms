@@ -2,3 +2,5 @@ branches:
   except:
     - /master/
     - /develop/
+  only:
+  	- /unit-test/
