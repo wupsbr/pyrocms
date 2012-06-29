@@ -132,7 +132,6 @@ class REST_Controller extends MY_Controller
 		// Set up our GET variables
 		$this->_get_args = array_merge($this->_get_args, $this->uri->ruri_to_assoc());
 
-		//$this->load->library('security');
 		// This library is bundled with REST_Controller 2.5+, but will eventually be part of CodeIgniter itself
 		$this->load->library('format');
 
@@ -153,7 +152,7 @@ class REST_Controller extends MY_Controller
 				break;
 
 			case 'post':
-				$this->_post_args = $_POST;
+				$this->_post_args = $this->input->post();
 
 				$this->request->format and $this->request->body = file_get_contents('php://input');
 				break;
@@ -180,10 +179,12 @@ class REST_Controller extends MY_Controller
 		}
 
 		// Now we know all about our request, let's try and parse the body if it exists
+		// @codeCoverageIgnoreStart
 		if ($this->request->format and $this->request->body)
 		{
 			$this->request->body = $this->format->factory($this->request->body, $this->request->format)->to_array();
 		}
+		// @codeCoverageIgnoreEnd
 
 		// Merge both for one mega-args variable
 		$this->_args = array_merge($this->_get_args, $this->_put_args, $this->_post_args, $this->_delete_args);
@@ -203,15 +204,15 @@ class REST_Controller extends MY_Controller
 		// When there is no specific override for the current class/method, use the default auth value set in the config
 		if ($this->auth_override !== TRUE)
 		{
-			if ($this->config->item('rest_auth') == 'basic')
+			if (config_item('rest_auth') == 'basic')
 			{
 				$this->_prepare_basic_auth();
 			}
-			elseif ($this->config->item('rest_auth') == 'digest')
+			elseif (config_item('rest_auth') == 'digest')
 			{
 				$this->_prepare_digest_auth();
 			}
-			elseif ($this->config->item('rest_ip_whitelist_enabled'))
+			elseif (config_item('rest_ip_whitelist_enabled'))
 			{
 				$this->_check_whitelist_auth();
 			}
@@ -236,10 +237,12 @@ class REST_Controller extends MY_Controller
 		}
 
 		// only allow ajax requests
+		// @codeCoverageIgnoreStart
 		if (!$this->input->is_ajax_request() AND config_item('rest_ajax_only'))
 		{
 			$this->response(array('status' => false, 'error' => 'Only AJAX requests are accepted.'), 505);
 		}
+		// @codeCoverageIgnoreEnd
 	}
 
 	/**
@@ -255,6 +258,7 @@ class REST_Controller extends MY_Controller
 	public function _remap($object_called, $arguments)
 	{
 		$pattern = '/^(.*)\.('.implode('|', array_keys($this->_supported_formats)).')$/';
+
 		if (preg_match($pattern, $object_called, $matches))
 		{
 			$object_called = $matches[1];
@@ -345,6 +349,7 @@ class REST_Controller extends MY_Controller
 			is_numeric($http_code) OR $http_code = 200;
 
 			// If the format method exists, call and return the output in that format
+			// @codeCoverageIgnoreStart
 			if (method_exists($this, '_format_'.$this->response->format))
 			{
 				// Set the correct format header
@@ -361,6 +366,7 @@ class REST_Controller extends MY_Controller
 
 				$output = $this->format->factory($data)->{'to_'.$this->response->format}();
 			}
+			// @codeCoverageIgnoreEnd
 
 			// Format not supported, output directly
 			else
@@ -411,6 +417,7 @@ class REST_Controller extends MY_Controller
 	 * Detect which format should be used to output the data.
 	 * 
 	 * @return string The output format. 
+	 * @codeCoverageIgnore
 	 */
 	protected function _detect_output_format()
 	{
@@ -496,7 +503,7 @@ class REST_Controller extends MY_Controller
 	{
 		$method = strtolower($this->input->server('REQUEST_METHOD'));
 
-		if ($this->config->item('enable_emulate_request') && $this->input->post('_method'))
+		if (config_item('enable_emulate_request') && $this->input->post('_method'))
 		{
 			$method = $this->input->post('_method');
 		}
@@ -676,7 +683,7 @@ class REST_Controller extends MY_Controller
 	{
 
 		// Assign the class/method auth type override array from the config
-		$this->overrides_array = $this->config->item('auth_override_class_method');
+		$this->overrides_array = config_item('auth_override_class_method');
 
 		// Check to see if the override array is even populated, otherwise return false
 		if (empty($this->overrides_array))
@@ -707,7 +714,9 @@ class REST_Controller extends MY_Controller
 		if ($this->overrides_array[$this->router->class][$this->router->method] == 'digest')
 		{
 			$this->_prepare_digest_auth();
+			// @codeCoverageIgnoreStart
 			return true;
+			// @codeCoverageIgnoreEnd
 		}
 
 		// Whitelist auth override found, check client's ip against config whitelist
@@ -801,7 +810,7 @@ class REST_Controller extends MY_Controller
 	 */
 	protected function _xss_clean($val, $process)
 	{
-		if (CI_VERSION < 2)
+		if (defined('CI_VERSION') && CI_VERSION < 2)
 		{
 			return $process ? $this->input->xss_clean($val) : $val;
 		}
@@ -832,12 +841,12 @@ class REST_Controller extends MY_Controller
 	 */
 	protected function _check_login($username = '', $password = NULL)
 	{
-		if (empty($username))
+		if (empty($username) OR ! is_string($username))
 		{
 			return FALSE;
 		}
 
-		$valid_logins = & $this->config->item('rest_valid_logins');
+		$valid_logins = config_item('rest_valid_logins');
 
 		if (!array_key_exists($username, $valid_logins))
 		{
@@ -923,17 +932,24 @@ class REST_Controller extends MY_Controller
 			$this->_force_login($uniqid);
 		}
 
-		// We need to retrieve authentication informations from the $auth_data variable
-		preg_match_all('@(username|nonce|uri|nc|cnonce|qop|response)=[\'"]?([^\'",]+)@', $digest_string, $matches);
-		$digest = array_combine($matches[1], $matches[2]);
+		if (preg_match_all('@(username|nonce|uri|nc|cnonce|qop|response)=[\'"]?([^\'",]+)@', $digest_string, $matches))
+		{
+			// We need to retrieve authentication informations from the $auth_data variable
+			$digest = array_combine($matches[1], $matches[2]);
+		}
+		else
+		{
+			// Something goes really wrong
+			show_error('Unauthorized Access');
+		}
 
 		if (!array_key_exists('username', $digest) OR !$this->_check_login($digest['username']))
 		{
 			$this->_force_login($uniqid);
 		}
 
-		$valid_logins = & $this->config->item('rest_valid_logins');
-		$valid_pass = $valid_logins[$digest['username']];
+		$valid_logins = config_item('rest_valid_logins');
+		$valid_pass = array_key_exists($digest['username'], $valid_logins) ? $valid_logins[$digest['username']] : 'undefined';
 
 		// This is the valid response expected
 		$A1 = md5($digest['username'].':'.$this->config->item('rest_realm').':'.$valid_pass);
@@ -942,9 +958,9 @@ class REST_Controller extends MY_Controller
 
 		if ($digest['response'] != $valid_response)
 		{
-			header('HTTP/1.0 401 Unauthorized');
-			header('HTTP/1.1 401 Unauthorized');
-			exit;
+			defined('STDIN') OR header('HTTP/1.0 401 Unauthorized');
+			defined('STDIN') OR header('HTTP/1.1 401 Unauthorized');
+			defined('STDIN') OR exit;
 		}
 	}
 
@@ -970,8 +986,8 @@ class REST_Controller extends MY_Controller
 
 	/**
 	 * @todo Document this.
-	 *
 	 * @param string $nonce 
+	 * @codeCoverageIgnore
 	 */
 	protected function _force_login($nonce = '')
 	{

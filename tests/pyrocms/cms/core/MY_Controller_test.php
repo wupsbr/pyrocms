@@ -79,6 +79,14 @@ class MY_Controller_test extends PyroCMS_TestCase {
 		$this->enable_modules = TRUE;
 
 		$my_controller = new MY_Controller();
+
+		// Integrity test
+		$this->assertInstanceOf('MX_Controller', $my_controller);
+		$this->assertObjectHasAttribute('module', $my_controller);
+		$this->assertObjectHasAttribute('controller', $my_controller);
+		$this->assertObjectHasAttribute('method', $my_controller);
+		$this->assertObjectHasAttribute('module_details', $my_controller);
+		$this->assertObjectHasAttribute('permissions', $my_controller);
 	}
 
 	public function test_function_ci()
