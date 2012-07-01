@@ -1,6 +1,6 @@
 <?php (defined('BASEPATH')) OR exit('No direct script access allowed');
 
-require APPPATH."libraries/MX/Loader.php";
+class_exists('MX_Loader') OR require APPPATH."libraries/MX/Loader.php";
 
 /**
  * This is the loader class used throughout PyroCMS.

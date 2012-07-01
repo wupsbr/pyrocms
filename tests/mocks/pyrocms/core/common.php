@@ -183,9 +183,25 @@ if ( ! function_exists('pyro_class'))
 
 			}
 		}
+		elseif ($name == 'MX_Lang' && ! class_exists('MX_Lang'))
+		{
+			class MX_Lang {
+
+				public $languange;
+
+			}
+		}
+		elseif ($name == 'MX_Router' && ! class_exists('MX_Router'))
+		{
+			class MX_Router {}
+		}
 		elseif ($name == 'Settings' && ! class_exists('Settings'))
 		{
 			class Settings extends Pyro_Mock {}
+		}
+		elseif ($name == 'Modules' && ! class_exists('Modules'))
+		{
+			class Modules extends Pyro_Mock {}
 		}
 		elseif ($name == 'Events' && ! class_exists('Events'))
 		{

@@ -1,14 +1,12 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed');
+
+class_exists('MX_Lang') OR require APPPATH."libraries/MX/Lang.php";
+
 /**
- * The Language Handler Library.
+ * General Language library class for using in PyroCMS. The Language Handler Library.
  * 
  * @author PyroCMS Dev Team
  * @package PyroCMS\Core\Libraries 
- */
-require APPPATH."libraries/MX/Lang.php";
-
-/**
- * General Language library class for using in PyroCMS
  */
 class MY_Lang extends MX_Lang
 {
