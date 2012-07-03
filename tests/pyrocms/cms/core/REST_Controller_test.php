@@ -416,6 +416,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 		$rest_controller->setExpectedRest = $rest;
 
 		$this->assertTrue($rest_controller->do_check_limit('blog'));
+		die('here');
 	}
 
 	public function test_check_limit_count_exceeds_limit()

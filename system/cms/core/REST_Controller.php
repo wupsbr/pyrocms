@@ -640,6 +640,8 @@ class REST_Controller extends MY_Controller
 				->get(config_item('rest_limits_table'))
 				->row();
 
+		var_dump($result);
+
 		// No calls yet, or been an hour since they called
 		if (!$result OR $result->hour_started < time() - (60 * 60))
 		{
