@@ -155,7 +155,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 			'ignore_limits' => FALSE,
 		));
 
-		$rest =& $rest_controller->rest;
+		$rest = $rest_controller->rest;
 		$db = $rest->db = new Pyro_Mock();
 		$rest->db->where = $rest->db->get = function() use($db) {
 			return $db;
@@ -211,7 +211,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 		$rest_controller = new Mock_PyroCMS_Core_Rest();
 		
 		// Mock DB
-		$rest =& $rest_controller->rest;
+		$rest = $rest_controller->rest;
 		$db = $rest->db = new Pyro_Mock();
 		$rest->db->where = $rest->db->get = function() use($db) {
 			return $db;
@@ -404,7 +404,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 			'ignore_limits' => FALSE,
 		));
 
-		$rest =& $rest_controller->rest;
+		$rest = $rest_controller->rest;
 		$db = $rest->db = new Pyro_Mock();
 		$rest->db->where = $rest->db->get = function() use($db) {
 			return $db;
@@ -434,7 +434,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 			'ignore_limits' => FALSE,
 		));
 
-		$rest =& $rest_controller->rest;
+		$rest = $rest_controller->rest;
 		$db = $rest->db = new Pyro_Mock();
 		$rest->db->where = $rest->db->get = function() use($db) {
 			return $db;
@@ -469,7 +469,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 			'ignore_limits' => FALSE,
 		));
 
-		$rest =& $rest_controller->rest;
+		$rest = $rest_controller->rest;
 		$db = $rest->db = new Pyro_Mock();
 		$rest->db->where = $rest->db->get = $rest->db->set = $rest->db->update = function() use($db) {
 			return $db;
