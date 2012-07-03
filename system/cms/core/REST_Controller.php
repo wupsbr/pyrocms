@@ -630,12 +630,8 @@ class REST_Controller extends MY_Controller
 			return TRUE;
 		}
 
-		var_dump('method',$controller_method);
-
 		// How many times can you get to this method an hour?
 		$limit = $this->methods[$controller_method]['limit'];
-
-		var_dump('limit',$limit);
 
 		// Get data on a keys usage
 		$result = $this->rest->db
@@ -643,8 +639,6 @@ class REST_Controller extends MY_Controller
 				->where('api_key', $this->rest->key)
 				->get(config_item('rest_limits_table'))
 				->row();
-
-		var_dump('result',$result);
 
 		// No calls yet, or been an hour since they called
 		if (!$result OR $result->hour_started < time() - (60 * 60))

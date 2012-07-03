@@ -418,7 +418,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 
 		$this->assertTrue($rest_controller->do_check_limit('blog'));
 	}
-
+	/*
 	public function test_check_limit_count_exceeds_limit()
 	{
 		$this->_prepare_restful_env();
@@ -452,6 +452,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 
 		$this->assertFalse($rest_controller->do_check_limit('blog'));
 	}
+	*/
 
 	public function test_check_limit_count_after_one_hour_and_not_exceeds_limit()
 	{
