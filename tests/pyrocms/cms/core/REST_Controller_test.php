@@ -425,7 +425,7 @@ class REST_Controller_test extends PyroCMS_TestCase {
 
 		// Mock Router
 		$rest_controller = new Mock_PyroCMS_Core_Rest();
-		$rest_controller->setExpectedMethods = array('blog' => 'index');
+		$rest_controller->setExpectedMethods = array('blog' => array('index', 'limit' => 1));
 
 		$this->ci_set_config('rest_limits_table', 'limits');
 
