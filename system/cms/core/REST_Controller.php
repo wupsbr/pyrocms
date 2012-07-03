@@ -623,7 +623,7 @@ class REST_Controller extends MY_Controller
 	 */
 	protected function _check_limit($controller_method)
 	{
-		var_dump(isset($this->methods[$controller_method]['limit']));
+		var_dump($this->rest->ignore_limits,isset($this->methods[$controller_method]['limit']));
 		// They are special, or it might not even have a limit
 		if (!empty($this->rest->ignore_limits) OR !isset($this->methods[$controller_method]['limit']))
 		{
