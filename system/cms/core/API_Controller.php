@@ -26,7 +26,6 @@ class API_Controller extends REST_Controller
 		if ( ! Settings::get('api_enabled'))
 		{
 			$this->response( array('status' => false, 'error' => 'This API is currently disabled.'), 505 );
-			defined('STDIN') OR exit;
 		}
 	}
 }

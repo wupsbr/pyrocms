@@ -195,6 +195,9 @@ class REST_Controller extends MY_Controller
 		// Which format should the data be returned in?
 		$this->response->lang = $this->_detect_lang();
 
+		// Initial HTTP Headers
+		$this->response->headers = array();
+
 		// Developers can extend this class and add a check in here
 		$this->early_checks();
 
@@ -353,7 +356,7 @@ class REST_Controller extends MY_Controller
 			if (method_exists($this, '_format_'.$this->response->format))
 			{
 				// Set the correct format header
-				header('Content-Type: '.$this->_supported_formats[$this->response->format]);
+				$this->_header('Content-Type: '.$this->_supported_formats[$this->response->format]);
 
 				$output = $this->{'_format_'.$this->response->format}($data);
 			}
@@ -362,7 +365,7 @@ class REST_Controller extends MY_Controller
 			elseif (method_exists($this->format, 'to_'.$this->response->format))
 			{
 				// Set the correct format header
-				header('Content-Type: '.$this->_supported_formats[$this->response->format]);
+				$this->_header('Content-Type: '.$this->_supported_formats[$this->response->format]);
 
 				$output = $this->format->factory($data)->{'to_'.$this->response->format}();
 			}
@@ -375,11 +378,11 @@ class REST_Controller extends MY_Controller
 			}
 		}
 
-		defined('STDIN') OR header('HTTP/1.1: '.$http_code);
-		defined('STDIN') OR header('Status: '.$http_code);
-		defined('STDIN') OR header('Content-Length: '.strlen($output));
+		$this->_header('HTTP/1.1: '.$http_code);
+		$this->_header('Status: '.$http_code);
+		$this->_header('Content-Length: '.strlen((string) $output));
 
-		defined('STDIN') OR exit($output);
+		$this->_render($output);
 	}
 
 	/**
@@ -958,9 +961,9 @@ class REST_Controller extends MY_Controller
 
 		if ($digest['response'] != $valid_response)
 		{
-			defined('STDIN') OR header('HTTP/1.0 401 Unauthorized');
-			defined('STDIN') OR header('HTTP/1.1 401 Unauthorized');
-			defined('STDIN') OR exit;
+			$this->_header('HTTP/1.0 401 Unauthorized');
+			$this->_header('HTTP/1.1 401 Unauthorized');
+			$this->_render();
 		}
 	}
 
@@ -993,11 +996,11 @@ class REST_Controller extends MY_Controller
 	{
 		if ($this->config->item('rest_auth') == 'basic')
 		{
-			header('WWW-Authenticate: Basic realm="'.$this->config->item('rest_realm').'"');
+			$this->_header('WWW-Authenticate: Basic realm="'.$this->config->item('rest_realm').'"');
 		}
 		elseif ($this->config->item('rest_auth') == 'digest')
 		{
-			header('WWW-Authenticate: Digest realm="'.$this->config->item('rest_realm').'", qop="auth", nonce="'.$nonce.'", opaque="'.md5($this->config->item('rest_realm')).'"');
+			$this->_header('WWW-Authenticate: Digest realm="'.$this->config->item('rest_realm').'", qop="auth", nonce="'.$nonce.'", opaque="'.md5($this->config->item('rest_realm')).'"');
 		}
 
 		$this->response(array('status' => false, 'error' => 'Not authorized'), 401);
@@ -1032,6 +1035,52 @@ class REST_Controller extends MY_Controller
 	protected function _format_jsonp($data = array())
 	{
 		return $this->get('callback').'('.json_encode($data).')';
+	}
+
+	/**
+	 * Set HTTP Headers
+	 * 
+	 * @param string HTTP Header
+	 * @return void
+	 */
+	protected function _header($data = '')
+	{
+		// Get headers placeholder
+		isset($this->response->headers) OR $this->response->headers = array();
+		
+		// Add HTTP Header data into response headers stack
+		array_push($this->response->headers, $data);
+	}
+
+	/**
+	 * Send Output to browser
+	 * 
+	 * @param string The HTTP response body
+	 * @return mixed HTTP Response
+	 * @codeCoverageIgnore
+	 */
+	protected function _render($body = '')
+	{
+		// Only works for HTTP daemon!
+		if ( ! defined('STDIN'))
+		{
+			// Send the headers
+			foreach ($this->response->headers as $header)
+			{
+				header($header);
+			}
+
+			if (empty($body))
+			{
+				// Without response body
+				exit;
+			}
+			else
+			{
+				// Send response body
+				exit($body);
+			}
+		}
 	}
 
 }
