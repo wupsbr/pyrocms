@@ -381,7 +381,7 @@ class REST_Controller extends MY_Controller
 		// Ensure the body IS A STRING
 		if ( ! is_string($output))
 		{
-			$output = (is_array($output)) ? json_encode($output) ? (string) $output;
+			$output = (is_array($output)) ? json_encode($output) : (string) $output;
 		}
 
 		$this->_header('HTTP/1.1: '.$http_code);
