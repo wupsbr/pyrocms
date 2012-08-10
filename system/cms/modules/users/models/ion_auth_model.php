@@ -342,11 +342,11 @@ class Ion_auth_model extends CI_Model
 	{
 	    if (empty($email))
 	    {
-		return FALSE;
+			return FALSE;
 	    }
 
 	    return $this->db->where('email', $email)
-		->where($this->ion_auth->_extra_where)
+			->where($this->ion_auth->_extra_where)
 			->count_all_results($this->tables['users']) > 0;
 	}
 
@@ -509,11 +509,12 @@ class Ion_auth_model extends CI_Model
 		// If username is taken, use username1 or username2, etc.
 		if ($this->identity_column != 'username')
 		{
+			$original_username = $username;
 			for($i = 0; $this->username_check($username); $i++)
 			{
 				if($i > 0)
 				{
-					$username .= $i;
+					$username = $original_username.$i;
 				}
 			}
 		}
