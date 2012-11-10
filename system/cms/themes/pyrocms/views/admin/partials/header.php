@@ -2,22 +2,25 @@
 	<span>PyroCMS requires that JavaScript be turned on for many of the functions to work correctly. Please turn JavaScript on and reload the page.</span>
 </noscript>
 
-<div class="topbar" dir=<?php $vars = $this->load->_ci_cached_vars; echo $vars['lang']['direction']; ?>>
-	
-	<div class="wrapper">
-		<div id="logo">
-			<?php echo anchor('', $this->settings->site_name, 'target="_blank"'); ?>
+<div class="navbar navbar-inverse navbar-static-top">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</a>
+			<?php echo anchor('admin', $this->settings->site_name, 'class="brand"'); ?>
+			<div class="nav-collapse collapse">
+				<nav>
+					<?php file_partial('navigation'); ?>
+				</nav>
+			</div><!--/.nav-collapse -->
 		</div>
-	
-		<nav>
-			<?php file_partial('navigation'); ?>
-		</nav>
 	</div>
-	
 </div>
-
 <div class="subbar">
-	<div class="wrapper">
+	<div class="container">
 		<h2><?php echo $module_details['name'] ? anchor('admin/'.$module_details['slug'], $module_details['name']) : lang('global:dashboard'); ?></h2>
 	
 		<small>

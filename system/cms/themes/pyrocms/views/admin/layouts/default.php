@@ -16,13 +16,12 @@
 	<base href="<?php echo base_url(); ?>" />
 
 	<!-- Mobile viewport optimized -->
-	<meta name="viewport" content="width=device-width,user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 	<!-- CSS. No need to specify the media attribute unless specifically targeting a media type, leaving blank implies media=all -->
-	<?php echo Asset::css('plugins.css'); ?>
-	<?php echo Asset::css('workless/workless.css'); ?>
-	<?php echo Asset::css('workless/application.css'); ?>
-	<?php echo Asset::css('workless/responsive.css'); ?>
+	<?php echo Asset::css('main/style.css'); ?>
+	<?php echo Asset::css('main/responsive.css'); ?>
+	<?php echo Asset::css('main/animate.css'); ?>
 	<!-- End CSS-->
 
 	<!-- Load up some favicons -->
@@ -72,7 +71,6 @@
 			</ul>
 		</div>
 	</footer>
-
 	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6. chromium.org/developers/how-tos/chrome-frame-getting-started -->
 	<!--[if lt IE 7 ]>
 	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>

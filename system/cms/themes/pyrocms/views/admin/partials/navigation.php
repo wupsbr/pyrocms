@@ -1,6 +1,6 @@
-<ul class="primary-nav">
+<ul class="nav">
 	
-	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), 'class="btn orange' . (!$this->module > '' ? ' current' : '').'"');?></li>
+	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), 'class="top-link' . (!$this->module > '' ? ' current' : '').'"');?></li>
 	
 		<?php
 		foreach ($menu_items as $menu_item)
@@ -36,14 +36,15 @@
 				// They have access to more than one menu item, so create a drop menu
 				if ($count > 1 )
 				{
-					echo '<li>';
+					echo '<li class="dropdown">';
 
 					$name = lang('cp_nav_'.$menu_item)!=''&&lang('cp_nav_'.$menu_item)!=NULL ? lang('cp_nav_'.$menu_item) : $menu_item;
 					$current = (($this->module_details && $this->module_details['menu'] == $menu_item) or $menu_item == $this->module);
-					$class = $current ? "top-link current" : "top-link";
-					echo anchor(current_url() . '#', $name, array('class' => $class));
+					$class = $current ? "top-link dropdown-toggle current" : "top-link dropdown-toggle";
+					$data = "dropdown";
+					echo anchor(current_url() . '#', $name, array('class' => $class, 'data-toggle' => $data));
 
-					echo '<ul>';
+					echo '<ul class="dropdown-menu">';
 					
 				// User has access to Users module only, no other users item
 				} 
@@ -98,18 +99,18 @@
 		<?php endif; ?>
 
 		<?php if (array_key_exists('modules', $this->permissions) OR $this->current_user->group == 'admin'): ?>
-			<li><?php echo anchor('admin/modules', lang('cp_nav_addons'), 'class="top-link no-submenu' . (($this->module == 'modules') ? ' current"' : '"'));?></li>
+			<li><?php echo anchor('admin/addons', lang('cp_nav_addons'), 'class="top-link no-submenu' . (($this->module == 'modules') ? ' current"' : '"'));?></li>
 		<?php endif; ?>
 		
 		<?php
-		/* Do we really need to greet people?
+		/* Do we really need to greet people? 
 		<li id="user-greeting"><a href="#"><?php echo sprintf(lang('cp_logged_in_welcome'), $user->display_name); ?></a></li>
 		*/
 		?>
 			
-		<li>
-			<a href="<?php echo current_url().'#'; ?>"><?php echo lang('global:profile'); ?></a>
-			<ul>
+		<li class="dropdown">
+			<a href="<?php echo current_url().'#'; ?>" class="top-link dropdown-toggle" data-toggle="dropdown"><?php echo lang('global:profile'); ?></a>
+			<ul class="dropdown-menu">
 				<li><?php if ($this->settings->enable_profiles) echo anchor('edit-profile', lang('cp_edit_profile_label')) ?></li>
 				<li><?php echo anchor('', lang('cp_view_frontend'), 'target="_blank"'); ?></li>
 				<li><?php echo anchor('admin/logout', lang('cp_logout_label')); ?></li>

@@ -2,43 +2,6 @@
 // Scaffolding
 // --------------------------------------------------
 
-// Page Structure
-// -------------------------
-
-html {
-	height: 100%;
-}
-
-body {
-	height: 100%;
-}
-
-#viewport {
-	height: 100%;
-    min-height: 100%;
-}
-
-#page {
-	height: 100%;
-    min-height: 100%;
-}
-
-.wrapper {
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
-	margin: 0 auto -40px;
-}
-
-.push {
-	height: 40px;
-	clear: both;
-}
-
-footer {
-	width: 100%;
-	height: 40px;
-}
 
 // Body reset
 // -------------------------
@@ -50,8 +13,6 @@ body {
   line-height: @baseLineHeight;
   color: @textColor;
   background-color: @bodyBackground;
-  //background-image: url(@backgroundTile);
-  background-repeat: repeat;
 }
 
 
@@ -61,23 +22,10 @@ body {
 a {
   color: @linkColor;
   text-decoration: none;
-  .transition(color 250ms linear);
 }
 a:hover {
   color: @linkColorHover;
-  text-decoration: none;
-}
-a:active {
-	color: @black;
-	text-decoration: none;
-}
-
-.footer a:hover {
-	color: @linkColorHoverLight;
-}
-
-.footer a:active {
-	color: @linkColorActiveLight;
+  text-decoration: underline;
 }
 
 
