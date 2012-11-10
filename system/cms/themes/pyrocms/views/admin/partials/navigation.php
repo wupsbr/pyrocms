@@ -1,6 +1,6 @@
 <ul class="nav">
 	
-	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), 'class="pyrocon-dashboard top-link' . (!$this->module > '' ? ' current' : '').'"');?></li>
+	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), 'class="top-link' . (!$this->module > '' ? ' current' : '').'"');?></li>
 	
 		<?php
 		foreach ($menu_items as $menu_item)

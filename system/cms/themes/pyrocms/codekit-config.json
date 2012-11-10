@@ -143,17 +143,6 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
-    "\/js\/bootstrap\/bootstrap-dropdown.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-dropdown.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-dropdown-ck.js",
-      "fileType" : 64
-    },
     "\/css\/jquery\/images\/ui-bg_flat_75_f2f2f2_40x100.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -175,6 +164,17 @@
       "outputAbbreviatedPath" : "\/img\/admin\/logo.png",
       "initialSize" : 769,
       "fileType" : 8192
+    },
+    "\/js\/bootstrap\/bootstrap-dropdown.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-dropdown.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-dropdown-ck.js",
+      "fileType" : 64
     },
     "\/css\/jquery\/images\/ui-icons_454545_256x240.png" : {
       "ignoreWasSetByUser" : 0,
@@ -404,15 +404,6 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/codemirror\/mode\/php\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/img\/jquery-ui\/ui-icons_888888_256x240.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -423,6 +414,19 @@
       "outputAbbreviatedPath" : "\/img\/jquery-ui\/ui-icons_888888_256x240.png",
       "initialSize" : 4369,
       "fileType" : 8192
+    },
+    "\/css\/less\/buttons.less" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/less\/buttons.less",
+      "outputStyle" : 0,
+      "shouldRunBless" : 0,
+      "outputAbbreviatedPath" : "\/css\/css\/buttons.css",
+      "strictImports" : 0,
+      "fileType" : 1,
+      "debugStyle" : 0
     },
     "\/img\/jquery-ui\/ui-bg_glass_65_ffffff_1x400.png" : {
       "ignoreWasSetByUser" : 0,
@@ -457,18 +461,14 @@
       "initialSize" : 136,
       "fileType" : 8192
     },
-    "\/css\/less\/buttons.less" : {
+    "\/js\/codemirror\/mode\/php\/index.html" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/less\/buttons.less",
-      "outputStyle" : 0,
-      "shouldRunBless" : 0,
-      "outputAbbreviatedPath" : "\/css\/css\/buttons.css",
-      "strictImports" : 0,
-      "fileType" : 1,
-      "debugStyle" : 0
+      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
     },
     "\/js\/codemirror\/codemirror.js" : {
       "ignoreWasSetByUser" : 1,
@@ -994,17 +994,6 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/placeholder\/lang\/en-ck.js",
       "fileType" : 64
     },
-    "\/js\/ckeditor\/themes\/default\/theme.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/themes\/default\/theme.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/themes\/default\/theme-ck.js",
-      "fileType" : 64
-    },
     "\/css\/less\/pagination.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1018,6 +1007,17 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/js\/streams\/assignments.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/streams\/assignments.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/streams\/assignments-ck.js",
+      "fileType" : 64
+    },
     "\/js\/ckeditor\/plugins\/uicolor\/lang\/he.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1029,15 +1029,15 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/uicolor\/lang\/he-ck.js",
       "fileType" : 64
     },
-    "\/js\/streams\/assignments.js" : {
+    "\/js\/ckeditor\/themes\/default\/theme.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/streams\/assignments.js",
-      "outputStyle" : 0,
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/themes\/default\/theme.js",
+      "outputStyle" : 1,
       "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/streams\/assignments-ck.js",
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/themes\/default\/theme-ck.js",
       "fileType" : 64
     },
     "\/img\/icons\/pages.png" : {
@@ -1095,6 +1095,17 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
+    "\/css\/jquery\/images\/ui-icons_424242_256x240.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/jquery\/images\/ui-icons_424242_256x240.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/css\/jquery\/images\/ui-icons_424242_256x240.png",
+      "initialSize" : 5355,
+      "fileType" : 8192
+    },
     "\/js\/ckeditor\/plugins\/specialchar\/lang\/en.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1104,17 +1115,6 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/specialchar\/lang\/en-ck.js",
-      "fileType" : 64
-    },
-    "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp-ck.js",
       "fileType" : 64
     },
     "\/css\/less\/button-groups.less" : {
@@ -1130,25 +1130,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/css\/jquery\/images\/ui-icons_424242_256x240.png" : {
+    "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/jquery\/images\/ui-icons_424242_256x240.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/css\/jquery\/images\/ui-icons_424242_256x240.png",
-      "initialSize" : 5355,
-      "fileType" : 8192
-    },
-    "\/css\/admin\/uniform.default.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/admin\/uniform.default.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/a11yhelp\/dialogs\/a11yhelp-ck.js",
+      "fileType" : 64
     },
     "\/css\/workless\/application.css" : {
       "ignoreWasSetByUser" : 0,
@@ -1156,6 +1147,15 @@
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
       "inputAbbreviatedPath" : "\/css\/workless\/application.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
+    "\/css\/admin\/uniform.default.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/admin\/uniform.default.css",
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 16
     },
@@ -1181,17 +1181,6 @@
       "outputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-scrollspy-ck.js",
       "fileType" : 64
     },
-    "\/js\/jquery\/jquery.imgareaselect.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/jquery\/jquery.imgareaselect.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/jquery\/jquery.imgareaselect-ck.js",
-      "fileType" : 64
-    },
     "\/css\/jquery\/ui-lightness\/images\/ui-bg_glass_100_fdf5ce_1x400.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1202,6 +1191,17 @@
       "outputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-bg_glass_100_fdf5ce_1x400.png",
       "initialSize" : 125,
       "fileType" : 8192
+    },
+    "\/js\/jquery\/jquery.imgareaselect.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/jquery\/jquery.imgareaselect.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/jquery\/jquery.imgareaselect-ck.js",
+      "fileType" : 64
     },
     "\/js\/ckeditor\/plugins\/showblocks\/images\/block_h6.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1524,26 +1524,6 @@
       "initialSize" : 1737,
       "fileType" : 8192
     },
-    "\/js\/ckeditor\/adapters\/jquery.js" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/adapters\/jquery.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/adapters\/jquery-ck.js",
-      "fileType" : 64
-    },
-    "\/views\/admin\/partials\/notices.php" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/views\/admin\/partials\/notices.php",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
-    },
     "\/img\/admin\/uniform\/bg-input.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -1554,6 +1534,26 @@
       "outputAbbreviatedPath" : "\/img\/admin\/uniform\/bg-input.png",
       "initialSize" : 135,
       "fileType" : 8192
+    },
+    "\/views\/admin\/partials\/notices.php" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/views\/admin\/partials\/notices.php",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
+    "\/js\/ckeditor\/adapters\/jquery.js" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/adapters\/jquery.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/adapters\/jquery-ck.js",
+      "fileType" : 64
     },
     "\/js\/ckeditor\/plugins\/link\/dialogs\/link.js" : {
       "ignoreWasSetByUser" : 0,
@@ -1599,15 +1599,15 @@
       "initialSize" : 4369,
       "fileType" : 8192
     },
-    "\/img\/prettyPhoto\/facebook\/sprite.png" : {
+    "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/prettyPhoto\/facebook\/sprite.png",
+      "inputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/prettyPhoto\/facebook\/sprite.png",
-      "initialSize" : 4227,
+      "outputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "initialSize" : 90,
       "fileType" : 8192
     },
     "\/js\/ckeditor\/skins\/kama\/images\/sprites.png" : {
@@ -1621,15 +1621,15 @@
       "initialSize" : 7086,
       "fileType" : 8192
     },
-    "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png" : {
+    "\/img\/prettyPhoto\/facebook\/sprite.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
+      "inputAbbreviatedPath" : "\/img\/prettyPhoto\/facebook\/sprite.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-bg_highlight-soft_100_eeeeee_1x100.png",
-      "initialSize" : 90,
+      "outputAbbreviatedPath" : "\/img\/prettyPhoto\/facebook\/sprite.png",
+      "initialSize" : 4227,
       "fileType" : 8192
     },
     "\/js\/ckeditor\/plugins\/pyrofiles\/images\/icon.png" : {
@@ -1826,6 +1826,17 @@
       "outputAbbreviatedPath" : "No Output Path",
       "fileType" : 2048
     },
+    "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png",
+      "initialSize" : 120,
+      "fileType" : 8192
+    },
     "\/js\/ckeditor\/plugins\/showblocks\/images\/block_h4.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -1836,17 +1847,6 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/showblocks\/images\/block_h4.png",
       "initialSize" : 133,
       "fileType" : 8192
-    },
-    "\/js\/codemirror\/mode\/php\/php.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/php.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/php-ck.js",
-      "fileType" : 64
     },
     "\/js\/ckeditor\/plugins\/about\/dialogs\/logo_ckeditor.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1859,16 +1859,16 @@
       "initialSize" : 2759,
       "fileType" : 8192
     },
-    "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+    "\/js\/codemirror\/mode\/php\/php.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/jquery-ui\/ui-bg_glass_55_fbf9ee_1x400.png",
-      "initialSize" : 120,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/php.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/codemirror\/mode\/php\/php-ck.js",
+      "fileType" : 64
     },
     "\/css\/jquery\/ui-lightness\/images\/ui-icons_228ef1_256x240.png" : {
       "ignoreWasSetByUser" : 0,
@@ -1927,16 +1927,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/js\/codemirror\/mode\/coffeescript\/coffeescript.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
+    "\/img\/admin\/error.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/coffeescript\/coffeescript.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/codemirror\/mode\/coffeescript\/coffeescript-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/admin\/error.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/admin\/error.png",
+      "initialSize" : 1818,
+      "fileType" : 8192
     },
     "\/css\/less\/glyphicons.less" : {
       "ignoreWasSetByUser" : 0,
@@ -1951,16 +1951,16 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/img\/admin\/error.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
+    "\/js\/codemirror\/mode\/coffeescript\/coffeescript.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/admin\/error.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/admin\/error.png",
-      "initialSize" : 1818,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/codemirror\/mode\/coffeescript\/coffeescript.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/codemirror\/mode\/coffeescript\/coffeescript-ck.js",
+      "fileType" : 64
     },
     "\/css\/jquery\/jquery-ui.css" : {
       "ignoreWasSetByUser" : 0,
@@ -2097,17 +2097,6 @@
       "initialSize" : 180,
       "fileType" : 8192
     },
-    "\/img\/icons\/cursor_drag_arrow.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/icons\/cursor_drag_arrow.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/icons\/cursor_drag_arrow.png",
-      "initialSize" : 3256,
-      "fileType" : 8192
-    },
     "\/img\/colorbox\/internet_explorer\/borderTopLeft.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -2117,6 +2106,17 @@
       "processed" : 0,
       "outputAbbreviatedPath" : "\/img\/colorbox\/internet_explorer\/borderTopLeft.png",
       "initialSize" : 206,
+      "fileType" : 8192
+    },
+    "\/img\/icons\/cursor_drag_arrow.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/icons\/cursor_drag_arrow.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/icons\/cursor_drag_arrow.png",
+      "initialSize" : 3256,
       "fileType" : 8192
     },
     "\/js\/ckeditor\/plugins\/styles\/styles\/default.js" : {
@@ -2236,6 +2236,15 @@
       "initialSize" : 131,
       "fileType" : 8192
     },
+    "\/css\/jquery\/uniform.default.css" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/css\/jquery\/uniform.default.css",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 16
+    },
     "\/css\/less\/forms.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2248,15 +2257,6 @@
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/css\/jquery\/uniform.default.css" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/jquery\/uniform.default.css",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 16
     },
     "\/img\/admin\/input-required_1.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2311,6 +2311,15 @@
       "outputAbbreviatedPath" : "\/js\/modernizr-ck.js",
       "fileType" : 64
     },
+    "\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 2048
+    },
     "\/css\/less\/carousel.less" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -2323,15 +2332,6 @@
       "strictImports" : 0,
       "fileType" : 1,
       "debugStyle" : 0
-    },
-    "\/index.html" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/index.html",
-      "outputAbbreviatedPath" : "No Output Path",
-      "fileType" : 2048
     },
     "\/img\/prettyPhoto\/dark_rounded\/btnNext.png" : {
       "ignoreWasSetByUser" : 0,
@@ -2672,16 +2672,16 @@
       "initialSize" : 668,
       "fileType" : 8192
     },
-    "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc.js" : {
+    "\/img\/admin\/email-icon.png" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/img\/admin\/email-icon.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/admin\/email-icon.png",
+      "initialSize" : 761,
+      "fileType" : 8192
     },
     "\/js\/ckeditor\/plugins\/smiley\/dialogs\/smiley.js" : {
       "ignoreWasSetByUser" : 0,
@@ -2694,16 +2694,16 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/smiley\/dialogs\/smiley-ck.js",
       "fileType" : 64
     },
-    "\/img\/admin\/email-icon.png" : {
+    "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
       "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/admin\/email-icon.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/admin\/email-icon.png",
-      "initialSize" : 761,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/wsc\/dialogs\/wsc-ck.js",
+      "fileType" : 64
     },
     "\/css\/jquery\/images\/ui-bg_inset-soft_95_fef1ec_1x100.png" : {
       "ignoreWasSetByUser" : 0,
@@ -3749,17 +3749,6 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/uicolor\/lang\/en-ck.js",
       "fileType" : 64
     },
-    "\/js\/admin\/login.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 0,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/admin\/login.js",
-      "outputStyle" : 0,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/admin\/login-ck.js",
-      "fileType" : 64
-    },
     "\/js\/bootstrap\/bootstrap-carousel.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -3769,6 +3758,17 @@
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-carousel-ck.js",
+      "fileType" : 64
+    },
+    "\/js\/admin\/login.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/js\/admin\/login.js",
+      "outputStyle" : 0,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/admin\/login-ck.js",
       "fileType" : 64
     },
     "\/img\/admin\/icons\/16\/shadow\/cross.png" : {
@@ -4402,16 +4402,16 @@
       "initialSize" : 1562,
       "fileType" : 8192
     },
-    "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png" : {
+    "\/js\/ckeditor\/plugins\/devtools\/lang\/en.js" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png",
-      "initialSize" : 4369,
-      "fileType" : 8192
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/devtools\/lang\/en.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 1,
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/devtools\/lang\/en-ck.js",
+      "fileType" : 64
     },
     "\/js\/bootstrap\/bootstrap-tab.js" : {
       "ignoreWasSetByUser" : 0,
@@ -4424,16 +4424,16 @@
       "outputAbbreviatedPath" : "\/js\/bootstrap\/bootstrap-tab-ck.js",
       "fileType" : 64
     },
-    "\/js\/ckeditor\/plugins\/devtools\/lang\/en.js" : {
+    "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 1,
+      "ignore" : 0,
+      "hidden" : 0,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/devtools\/lang\/en.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 1,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/devtools\/lang\/en-ck.js",
-      "fileType" : 64
+      "inputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/css\/jquery\/ui-lightness\/images\/ui-icons_ffd27a_256x240.png",
+      "initialSize" : 4369,
+      "fileType" : 8192
     },
     "\/css\/less\/close.less" : {
       "ignoreWasSetByUser" : 0,
@@ -4644,17 +4644,6 @@
       "outputAbbreviatedPath" : "\/js\/ckeditor\/lang\/he-ck.js",
       "fileType" : 64
     },
-    "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png" : {
-      "ignoreWasSetByUser" : 0,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png",
-      "processed" : 0,
-      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png",
-      "initialSize" : 119,
-      "fileType" : 8192
-    },
     "\/js\/ckeditor\/plugins\/image\/dialogs\/image.js" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 1,
@@ -4665,6 +4654,17 @@
       "syntaxCheckerStyle" : 1,
       "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/image\/dialogs\/image-ck.js",
       "fileType" : 64
+    },
+    "\/img\/toggle.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/toggle.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/toggle.png",
+      "initialSize" : 3280,
+      "fileType" : 8192
     },
     "\/js\/codemirror\/mode\/css\/index.html" : {
       "ignoreWasSetByUser" : 0,
@@ -4710,15 +4710,15 @@
       "fileType" : 1,
       "debugStyle" : 0
     },
-    "\/img\/toggle.png" : {
+    "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png" : {
       "ignoreWasSetByUser" : 0,
-      "ignore" : 0,
-      "hidden" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/img\/toggle.png",
+      "inputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png",
       "processed" : 0,
-      "outputAbbreviatedPath" : "\/img\/toggle.png",
-      "initialSize" : 3280,
+      "outputAbbreviatedPath" : "\/js\/ckeditor\/plugins\/showblocks\/images\/block_p.png",
+      "initialSize" : 119,
       "fileType" : 8192
     },
     "\/css\/jquery\/images\/ui-icons_cd0a0a_256x240.png" : {
