@@ -435,6 +435,214 @@ nav#primary ul li ul li a.current:hover {
 }
 
 /* !end Search */
+/* !Aside Navigation */
+body.menu-open #page {
+    position: absolute;
+    margin: 0 0 0 -10px;
+    overflow: visible;
+    -webkit-transform: translateX(-190px);
+    -moz-transform: translateX(-190px);
+    -ms-transform: translateX(-190px);
+    -o-transform: translateX(-190px);
+    transform: translateX(-190px);
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    -moz-transition: -moz-transform 200ms ease-in;
+    -ms-transition: -ms-transform 200ms ease-in;
+    -o-transition: -o-transform 200ms ease-in;
+    transition: transform 200ms ease-in;
+}
+
+#close-mask {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 999;
+    background: transparent;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+#page {
+    position: relative;
+    z-index: 2;
+    -webkit-transition: -webkit-transform 200ms ease-in;
+    -moz-transition: -moz-transform 200ms ease-in;
+    -ms-transition: -ms-transform 200ms ease-in;
+    -o-transition: -o-transform 200ms ease-in;
+    transition: transform 200ms ease-in;
+}
+
+a.plus {
+	display: none;
+	position: absolute;
+	background-image: url('../img/open.png');
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 22px;
+	top: 15px;
+	right: 5px;
+	padding: 5px;
+	background-position: center;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	.backface-visibility(hidden);
+	.transition(all 200ms ease-in-out);
+}
+
+body.menu-open a.plus {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	.backface-visibility(hidden);
+	.rotate(45deg);
+	.transition(all 200ms ease-in-out);
+}
+
+#menu {
+    display: none;
+    position: absolute;
+    width: 190px;
+    top: 0;
+    right: 0;
+    background: #1c1c1c;
+    background: url("../img/slideout.png");
+    background-repeat: repeat-y;
+    background-size: 190px 100px;
+}
+
+#menu > header {
+   padding: 0 8px;
+   width: 220px;
+   height: 43px;
+   background-image: -webkit-gradient( linear, left top, left bottom, from(#434B5B), to(#242B39));
+   border-bottom: 1px solid #000;
+   border-top: 1px solid #5F6673;  
+   color: #fff;
+}
+
+#menu #search {
+    position: relative;
+    top: 6px;
+    width: 100%;
+    padding: 2px 8px 0 10px;
+    background: -webkit-gradient( linear, 0 0, 0 100%, from(#414A5A), to(#4C5464));
+    color: #AAB2C0;
+    border: 1px solid #222936;
+    -webkit-border-radius: 15px;
+    -webkit-box-shadow: inset 0 1px 2px -1px rgba(0, 0, 0, .5), 0 1px 2px -1px rgba(255, 255, 255, .4);
+    height: 27px;
+    outline: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+#menu #search::-webkit-input-placeholder {
+    color: #AAB2C0;
+    font-weight: normal;
+}
+
+#menu .scrollable {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    /* overflow-y: scroll; */
+    /* -webkit-overflow-scrolling: touch; */
+}
+#menu .separator {
+    #gradient > .vertical-alpha(rgba(255,255,255,.06), rgba(255,255,255,.02));
+    .box-shadow(inset 0px -1px 0px 0px rgba(0, 0, 0, .5), inset 0px 1px 0px 0px rgba(255, 255, 255, .04));
+    color: @white;
+    padding: 6px 0 4px 8px;
+    margin-left: 0px;
+    text-indent: 30px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .6);
+    font-size: 10px;
+    line-height: 14px;
+    text-transform: uppercase;
+}
+    
+ #menu ul {
+ 	margin: 0px 0px 0px 0px;
+ }
+
+#menu ul li {
+    position: relative;
+    display: block;
+    list-style: none;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 3px 0 3px 30px;     
+    background-color: transparent;
+    .box-shadow(inset 0px -1px 0px 0px rgba(0, 0, 0, .3), inset 0px 1px 0px 0px rgba(255, 255, 255, .04));
+    //border-top: 1px solid @highlightBorder;
+    //border-bottom: 1px solid @shadeBorder;
+    font-size: 16px;
+    color: @white;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .6);
+    .transition(all .3s linear);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    &:hover, &:active, &.active, &:focus {
+    .box-shadow(inset 0px 0px 10px 1px rgba(0, 0, 0, .6));
+    background-color: rgba(0,0,0, .20);
+    }
+}
+    
+#menu ul li::first-child, #menu ul li::last-child {
+	.box-shadow(inset 0px -1px 0px 0px rgba(0, 0, 0, .2), inset 0px 1px 0px 0px rgba(255, 255, 255, .04));
+	&:hover, &:active, &.active, &:focus {
+    .box-shadow(inset 0px 0px 10px 1px rgba(0, 0, 0, .4));
+    }
+}
+
+#menu ul li:hover + li {
+    .box-shadow(inset 0px -1px 0px 0px rgba(0, 0, 0, .2), inset 0px 1px 0px 0px rgba(255, 255, 255, .06));
+}
+
+#menu ul li a {
+    color: @white;
+    display: block;
+    position: relative;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    .transition (all .3s linear);
+    &:hover, &:active, &.active, &:focus {
+	   color: @white; 
+    }
+}
+
+#menu .active {
+    box-shadow: inset 0 2px 2px 2px rgba(0,0,0,1);
+}
+#menu ul li img {
+    vertical-align: middle;
+    display: block;
+    float: left;
+    margin: 5px 10px 0 0;
+}
+#menu ul li .count {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    background: #3E485E;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0, #3E485E), color-stop(1, #323A4D));
+    border-top: 1px solid #505A63;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .4);
+    color: #BFC5D2;
+    padding: 1px 3px 3px 4px;
+    display: inline-block;
+    line-height: 12px;
+    min-width: 11px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .6);
+}
+#menu ul li#copy {
+    padding: 10px 8px;
+    font-size: 14px;
+    line-height: 18px;
+}
+#menu ul li#copy p {
+    font-weight: 400;
+}
+/* !end Aside Navigation */
 /* !Subbar */
 .subbar {
 	width:100%;
@@ -778,11 +986,8 @@ nav#shortcuts ul li a:hover
 
 /* !Footer */
 footer {
-	padding:25px 0;
 	text-align:center;
-	float:left;
 	width:100%;
-	background:#222;
 	border-top:1px solid #000;
 }
 
@@ -795,7 +1000,7 @@ footer p {
 	color:#666;
 	text-shadow:0 1px 0 #000;
 	font-size:12px;
-	float:left;
+	text-align: left;
 }
 
 /* !end Footer */
@@ -804,11 +1009,17 @@ footer select {
 	width:250px!important;
 }
 
+footer form {
+	margin: 0px;
+	padding-bottom: 20px;
+	float: right;
+}
+
 ul#lang {
 	text-align:center;
 	color:#333;
-	margin-right:60px;
-	float:right;
+	margin: 0px;
+	padding: 0px;
 }
 
 ul#lang li {

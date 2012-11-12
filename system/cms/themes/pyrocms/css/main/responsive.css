@@ -34,6 +34,13 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+/*
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+*/
 .hidden {
   display: none;
   visibility: hidden;

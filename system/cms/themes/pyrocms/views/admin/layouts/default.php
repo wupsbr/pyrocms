@@ -38,44 +38,51 @@
 </head>
 
 <body>
-
-	<div id="container">
-
-		<section id="content">
-
-			<?php file_partial('header'); ?>
-
-			<div id="content-body">
-				<?php file_partial('notices'); ?>
-				<?php echo $template['body']; ?>
-			</div>
-
-		</section>
-
-	</div>
-
-	<footer>
-		<div class="wrapper">
-			<p>Copyright &copy; 2009 - <?php echo date('Y'); ?> PyroCMS &nbsp; -- &nbsp; Version <?php echo CMS_VERSION.' '.CMS_EDITION; ?> &nbsp; -- &nbsp; Rendered in {elapsed_time} sec. using {memory_usage}.</p>
-
-			<ul id="lang">
-				<form action="<?php echo current_url(); ?>" id="change_language" method="get">
-					<select class="chzn" name="lang" onchange="this.form.submit();">
-						<?php foreach($this->config->item('supported_languages') as $key => $lang): ?>
-						<option value="<?php echo $key; ?>" <?php echo CURRENT_LANGUAGE == $key ? 'selected="selected"' : ''; ?>>
-								<?php echo $lang['name']; ?>
-							</option>
-					<?php endforeach; ?>
-				</select>
-				</form>
-			</ul>
-		</div>
-	</footer>
-	<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6. chromium.org/developers/how-tos/chrome-frame-getting-started -->
-	<!--[if lt IE 7 ]>
-	<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
-	<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
-	<![endif]-->
+	<div id="viewport">
+		<?php file_partial('aside'); ?>
+		<div id="page">
+			<div id="wrapper">
+				<div id="close-mask"></div>
+				<?php file_partial('header'); ?>
+				<section id="content">
+					<div class="container">
+						<div id="content-body">
+							<?php file_partial('notices'); ?>
+							<?php echo $template['body']; ?>
+						</div>
+					</div>
+				</section>
+				<div id="push"></div>
+			</div><!-- !end wrapper -->
+			<footer>
+				<div class="container">
+					<div class="row-fluid">
+						<div class="span8">
+							<p>Copyright &copy; 2009 - <?php echo date('Y'); ?> PyroCMS &nbsp; -- &nbsp; Version <?php echo CMS_VERSION.' '.CMS_EDITION; ?> &nbsp; -- &nbsp; Rendered in {elapsed_time} sec. using {memory_usage}.</p>
+						</div>
+						<div class="span4">
+							<ul id="lang">
+								<form action="<?php echo current_url(); ?>" id="change_language" method="get">
+									<select class="chzn" name="lang" onchange="this.form.submit();">
+										<?php foreach($this->config->item('supported_languages') as $key => $lang): ?>
+										<option value="<?php echo $key; ?>" <?php echo CURRENT_LANGUAGE == $key ? 'selected="selected"' : ''; ?>>
+												<?php echo $lang['name']; ?>
+											</option>
+									<?php endforeach; ?>
+									</select>
+								</form>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</footer>
+			<!-- Prompt IE 6 users to install Chrome Frame. Remove this if you want to support IE 6. chromium.org/developers/how-tos/chrome-frame-getting-started -->
+			<!--[if lt IE 7 ]>
+			<script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+			<script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+			<![endif]-->
+		</div><!-- !end page -->
+	</div><!-- !end viewport -->
 
 </body>
 </html>

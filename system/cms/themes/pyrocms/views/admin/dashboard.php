@@ -1,8 +1,8 @@
-<!-- left one_half -->
-<div class="one_half">
+<!-- !row-fluid -->
+<div class="row-fluid">
 
-	<!-- analytics -->
-	<div class="one_half">
+	<!-- !analytics -->
+		<div class="span12">
 		<?php if ((isset($analytic_visits) or isset($analytic_views)) and $theme_options->pyrocms_analytics_graph == 'yes'): ?>
 			<script type="text/javascript">
 				jQuery(function($) {
@@ -81,53 +81,47 @@
 			</div>
 		<?php endif; ?>
 	</div>
-	<!-- /analytics -->
+	<!-- !end analytics -->
+</div>
+<!-- !end row-fluid -->
 
-	<!-- rss feed -->
-	<?php if ( isset($rss_items) and $theme_options->pyrocms_news_feed == 'yes') : ?>
-		<div class="one_half" id="feed">
+<!-- !row-fluid -->
+<div class="row-fluid">
+	
+	<!-- !recent comments -->
+	<?php if (isset($recent_comments) and is_array($recent_comments) and $theme_options->pyrocms_recent_comments == 'yes') : ?>
+		<div id="existing-comments" class="span6">
 			<section class="title">
-				<h4><i class="icon-list"></i> <?php echo lang('cp_news_feed_title'); ?></h4>
+				<h4><i class="icon-comment"></i> <?php echo lang('comments:recent_comments') ?></h4>
 			</section>
-		
+
 			<section class="item">
-				<ul class="nolist">
-					<?php foreach($rss_items as $rss_item): ?>
-						<li>
-							<?php
-								$item_date	= strtotime($rss_item->get_date());
-								$item_month = date('M', $item_date);
-								$item_day	= date('j', $item_date);
-							?>
-						
-							<div class="date">
-								<span class="month">
-									<?php echo $item_month ?>
-								</span>
-								<span class="day">
-									<?php echo $item_day; ?>
-								</span>
-							</div>
-					
-							<h5><?php echo anchor($rss_item->get_permalink(), $rss_item->get_title(), 'target="_blank"'); ?></h5>				
-							<p class='item_body'><?php echo $rss_item->get_description(); ?></p>
-						</li>
-					<?php endforeach; ?>
-				</ul>
+				<?php if (count($recent_comments)): ?>
+					<ul class="nolist">
+						<?php foreach ($recent_comments as $comment) : ?>
+							<li>
+								<?php echo gravatar($comment->user_email, 100); ?>
+								<p>
+									<?php
+										$title = $comment->uri ? anchor($comment->uri, $comment->entry_title) : $comment->entry_title;
+										echo sprintf(lang('comments:list_comment'), $comment->user_name, $title);
+									?>
+									<?php echo (Settings::get('comment_markdown') AND $comment->parsed > '') ? strip_tags($comment->parsed) : $comment->comment; ?>
+								</p>
+							</li>
+						<?php endforeach; ?>
+					</ul>
+				<?php else: ?>
+					<div class="block-message block-message-warning"><?php echo lang('comments:no_comments');?></div>
+				<?php endif; ?>
 			</section>
 		</div>		
 	<?php endif; ?>
-	<!-- /rss feed -->
-
-</div>
-<!-- /left one_half -->
-
-<!-- right one_half -->
-<div class="one_half last">
-
-	<!-- quick links -->
+	<!-- !end recent comments -->
+	
+	<!-- !quick links -->
 	<?php if ($theme_options->pyrocms_quick_links == 'yes') : ?>
-		<div id="quick_links" class="one_half last">
+		<div id="quick_links" class="span6">
 			<section class="title <?php echo isset($rss_items); ?>">
 				<h4><i class="icon-share"></i> <?php echo lang('cp_admin_quick_links') ?></h4>
 			</section>
@@ -169,44 +163,54 @@
 			</section>
 		</div>		
 	<?php endif; ?>
-	<!-- /quick links -->
+	<!-- !end quick links -->
 
-	<!-- recent comments -->
-	<?php if (isset($recent_comments) and is_array($recent_comments) and $theme_options->pyrocms_recent_comments == 'yes') : ?>
-		<div id="existing-comments" class="one_half last">
+</div>
+<!-- !end row-fluid -->
+
+<!-- !row-fluid -->
+<div class="row-fluid">
+	<!-- !rss feed -->
+	<?php if ( isset($rss_items) and $theme_options->pyrocms_news_feed == 'yes') : ?>
+		<div id="feed" class="span12">
 			<section class="title">
-				<h4><i class="icon-comment"></i> <?php echo lang('comments:recent_comments') ?></h4>
+				<h4><i class="icon-list"></i> <?php echo lang('cp_news_feed_title'); ?></h4>
 			</section>
-
+		
 			<section class="item">
-				<?php if (count($recent_comments)): ?>
-					<ul class="nolist">
-						<?php foreach ($recent_comments as $comment) : ?>
-							<li>
-								<?php echo gravatar($comment->user_email, 100); ?>
-								<p>
-									<?php
-										$title = $comment->uri ? anchor($comment->uri, $comment->entry_title) : $comment->entry_title;
-										echo sprintf(lang('comments:list_comment'), $comment->user_name, $title);
-									?>
-									<?php echo (Settings::get('comment_markdown') AND $comment->parsed > '') ? strip_tags($comment->parsed) : $comment->comment; ?>
-								</p>
-							</li>
-						<?php endforeach; ?>
-					</ul>
-				<?php else: ?>
-					<div class="block-message block-message-warning"><?php echo lang('comments:no_comments');?></div>
-				<?php endif; ?>
+				<ul class="nolist">
+					<?php foreach($rss_items as $rss_item): ?>
+						<li>
+							<?php
+								$item_date	= strtotime($rss_item->get_date());
+								$item_month = date('M', $item_date);
+								$item_day	= date('j', $item_date);
+							?>
+						
+							<div class="date">
+								<span class="month">
+									<?php echo $item_month ?>
+								</span>
+								<span class="day">
+									<?php echo $item_day; ?>
+								</span>
+							</div>
+					
+							<h5><?php echo anchor($rss_item->get_permalink(), $rss_item->get_title(), 'target="_blank"'); ?></h5>				
+							<p class='item_body'><?php echo $rss_item->get_description(); ?></p>
+						</li>
+					<?php endforeach; ?>
+				</ul>
 			</section>
 		</div>		
 	<?php endif; ?>
-	<!-- /recent comments -->
+	<!-- !end rss feed -->
 
 </div>
-<!-- /right one_half -->
+<!-- !end row-fluid -->
 
-<!-- dashboard widgets -->
-<div class="one_full">
+<!-- !dashboard widgets -->
+<div class="span12">
 	{{ widgets:area slug="dashboard" }}
 </div>
 <!-- /dashboard widgets -->
