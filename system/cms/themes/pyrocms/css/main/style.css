@@ -168,11 +168,15 @@ body {
   line-height: 20px;
   color: #333333;
   background-color: #eeeeee;
+  background-image: url("../../img/bg-grain.png");
+  background-repeat: repeat;
 }
 #viewport {
   height: 100%;
   min-height: 100%;
   background-color: #eeeeee;
+  background-image: url("../../img/bg-grain.png");
+  background-repeat: repeat;
 }
 #page {
   height: 100%;
@@ -8509,7 +8513,7 @@ li.L9 {
   background: url("../../img/bg_blueish.jpg") repeat;
 }
 .noise {
-  background: url("../../img/bg_noise.jpg") repeat;
+  background: url("../../img/bg-grain.png") repeat;
 }
 .noisedark {
   background: url("../../img/bg_noisedark.jpg") repeat;
@@ -9252,27 +9256,16 @@ nav#shortcuts ul li a:hover
 /* !end Content */
 /* !Content boxes */
 .title {
-  background: #eeeeee;
-  background-image: -moz-linear-gradient(top, #f9f9f9, #eeeeee);
-  background-image: -ms-linear-gradient(top, #f9f9f9, #eeeeee);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f9f9f9), to(#eeeeee));
-  background-image: -webkit-linear-gradient(top, #f9f9f9, #eeeeee);
-  background-image: -o-linear-gradient(top, #f9f9f9, #eeeeee);
-  background-image: linear-gradient(top, #f9f9f9, #eeeeee);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='@grayLighter', GradientType=0);
-  border: 1px solid #ddd;
   border-radius: 3px;
   padding: 2px 15px 6px;
   position: relative;
   z-index: 5;
 }
 .title h4 {
-  font-size: 14px;
-  color: #333;
-  text-shadow: 0 1px 0 #ffffff;
+  font-size: 16px;
+  color: #999999;
+  text-shadow: 0 2px 1px #ffffff;
   font-weight: 400;
-  text-transform: uppercase;
 }
 .title h4 i {
   margin-top: 1px;
@@ -9294,9 +9287,12 @@ nav#shortcuts ul li a:hover
   z-index: 10;
   /* border: 1px solid #dddddd; */
 
-  border-bottom-right-radius: 3px;
-  border-bottom-left-radius: 3px;
-  box-shadow: 0 1px 1px #eeeeee;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 .item p {
   font-size: 14px;
@@ -9305,20 +9301,26 @@ nav#shortcuts ul li a:hover
 /* !end Content boxes */
 /* !Dashboard */
 /* !analytics */
-#analyticsWrapper,
+#analyticsWrapper {
+  height: 240px;
+  padding: 20px;
+  -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
 #analytics {
-  height: 185px;
-  float: left;
+  height: 240px;
 }
 #analytics .tickLabel {
-  color: #aaa;
+  color: #999999;
   font-size: 11px;
+  text-align: left;
 }
 #analytics .legend {
   display: none;
 }
 #tooltip {
-  z-index: 99999;
+  z-index: 1030;
   font-size: 11px;
   text-shadow: none;
 }

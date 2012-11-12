@@ -1,1 +1,0 @@
-(function(e){e(document).ready(function(){e(".input :input:visible:first").focus()})})(jQuery);

@@ -83,10 +83,10 @@ jQuery(function($) {
 
 		// Add the close link to all alert boxes
 		$('.alert').livequery(function(){
-			$(this).prepend('<a href="#" class="close">x</a>');
+			$(this).prepend('<a class="close" href="#" data-dismiss="alert">×</a>');
 		});
 
-		// Close the notifications when the close link is clicked
+		// Close the notifications when the close link is clicked		
 		$('a.close').live('click', function(e){
 			e.preventDefault();
 			$(this).fadeTo(200, 0); // This is a hack so that the close link fades out in IE

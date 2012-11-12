@@ -1,9 +1,9 @@
 <!-- !row-fluid -->
 <div class="row-fluid">
 
-	<!-- !analytics -->
-		<div class="span12">
 		<?php if ((isset($analytic_visits) or isset($analytic_views)) and $theme_options->pyrocms_analytics_graph == 'yes'): ?>
+		<div class="span12">
+		<!-- !analytics -->
 			<script type="text/javascript">
 				jQuery(function($) {
 					var visits = <?php echo isset($analytic_visits) ? $analytic_visits : 0; ?>;
@@ -15,7 +15,7 @@
 							points: { show: true },
 							grid: { hoverable: true, backgroundColor: '#fefefe' },
 							series: {
-								lines: { show: true, lineWidth: 1 },
+								lines: { show: true, lineWidth: 2 },
 								shadowSize: 0
 							},
 							xaxis: { mode: "time" },
@@ -79,9 +79,9 @@
 			<div class="item" id="analyticsWrapper">
 				<div id="analytics"></div>
 			</div>
+		</div>
+		<!-- !end analytics -->
 		<?php endif; ?>
-	</div>
-	<!-- !end analytics -->
 </div>
 <!-- !end row-fluid -->
 

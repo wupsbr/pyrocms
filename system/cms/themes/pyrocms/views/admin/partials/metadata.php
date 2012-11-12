@@ -4,19 +4,19 @@ Asset::js_inline('jQuery.noConflict();');
 Asset::js('jquery/jquery-ui.min.js', 'jquery/jquery-ui.min.js');
 Asset::js('jquery/jquery.colorbox.js');
 Asset::js('jquery/jquery.cooki.js');
-Asset::js('bootstrap/bootstrap-affix.js');
-Asset::js('bootstrap/bootstrap-alert.js');
-Asset::js('bootstrap/bootstrap-button.js');
-Asset::js('bootstrap/bootstrap-carousel.js');
-Asset::js('bootstrap/bootstrap-collapse.js');
-Asset::js('bootstrap/bootstrap-dropdown.js');
-Asset::js('bootstrap/bootstrap-modal.js');
-Asset::js('bootstrap/bootstrap-popover.js');
-Asset::js('bootstrap/bootstrap-scrollspy.js');
-Asset::js('bootstrap/bootstrap-tab.js');
-Asset::js('bootstrap/bootstrap-tooltip.js');
-Asset::js('bootstrap/bootstrap-transition.js');
-Asset::js('bootstrap/bootstrap-typeahead.js');
+//Asset::js('bootstrap/bootstrap-affix.js');
+//Asset::js('bootstrap/bootstrap-alert.js');
+//Asset::js('bootstrap/bootstrap-button.js');
+//Asset::js('bootstrap/bootstrap-carousel.js');
+//Asset::js('bootstrap/bootstrap-collapse.js');
+//Asset::js('bootstrap/bootstrap-dropdown.js');
+//Asset::js('bootstrap/bootstrap-modal.js');
+//Asset::js('bootstrap/bootstrap-popover.js');
+//Asset::js('bootstrap/bootstrap-scrollspy.js');
+//Asset::js('bootstrap/bootstrap-tab.js');
+//Asset::js('bootstrap/bootstrap-tooltip.js');
+//Asset::js('bootstrap/bootstrap-transition.js');
+//Asset::js('bootstrap/bootstrap-typeahead.js');
 
 Asset::js(array('codemirror/codemirror.js',
 	'codemirror/mode/css/css.js',
@@ -24,7 +24,8 @@ Asset::js(array('codemirror/codemirror.js',
 	'codemirror/mode/javascript/javascript.js',
 	'codemirror/mode/markdown/markdown.js',
 	'plugins.js',
-	'scripts.js'
+	'scripts.js',
+	'bootstrap/application-min.js'
 )); ?>
 
 <?php if (isset($analytic_visits) OR isset($analytic_views)): ?>

@@ -46,7 +46,7 @@
     e && e.preventDefault()
 
     $parent.length || ($parent = $this.hasClass('alert') ? $this : $this.parent())
-
+    
     $parent.trigger(e = $.Event('close'))
 
     if (e.isDefaultPrevented()) return

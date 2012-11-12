@@ -1,5 +1,5 @@
 <div class="sections_bar">
-	<div class="wrapper">
+	<div class="container">
 	
 		<ul>
 			<?php foreach ($module_details['sections'] as $name => $section): ?>

@@ -73,8 +73,8 @@
 ================================================== -->
 <header class="jumbotron subhead">
   <div class="container">
-    <h1>JavaScript for Bootstrap</h1>
-    <p class="lead">Bring Bootstrap's components to life&mdash;now with 13 custom jQuery plugins.
+    <h1>JavaScript for PyroCMS</h1>
+    <p class="lead">Bring PyroCMS's components to life&mdash;now with 13 custom jQuery plugins.
   </div>
 </header>
 
@@ -108,14 +108,14 @@
         ================================================== -->
         <section id="overview">
           <div class="page-header">
-            <h1>JavaScript in Bootstrap</h1>
+            <h1>JavaScript in PyroCMS</h1>
           </div>
 
           <h3>Individual or compiled</h3>
-          <p>If you have downloaded the latest version of Bootstrap, both <strong>bootstrap.js</strong> and <strong>bootstrap.min.js</strong> contain all of the plugins listed on this page.</p>
+          <p>If you have downloaded the latest version of PyroCMS, both <strong>bootstrap.js</strong> and <strong>bootstrap.min.js</strong> contain all of the plugins listed on this page.</p>
 
           <h3>Data attributes</h3>
-          <p>You can use all Bootstrap plugins purely through the markup API without writing a single line of JavaScript. This is Bootstrap's first class API and should be your first consideration when using a plugin.</p>
+          <p>You can use all PyroCMS plugins purely through the markup API without writing a single line of JavaScript. This is PyroCMS's first class API and should be your first consideration when using a plugin.</p>
 
           <p>That said, in some situations it may be desirable to turn this functionality off. Therefore, we also provide the ability to disable the data attribute API by unbinding all events on the body namespaced with `'data-api'`. This looks like this:
           <pre class="prettyprint linenums">$('body').off('.data-api')</pre>
@@ -124,7 +124,7 @@
           <pre class="prettyprint linenums">$('body').off('.alert.data-api')</pre>
 
           <h3>Programmatic API</h3>
-          <p>We also believe you should be able to use all Bootstrap plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
+          <p>We also believe you should be able to use all PyroCMS plugins purely through the JavaScript API. All public APIs are single, chainable methods, and return the collection acted upon.</p>
           <pre class="prettyprint linenums">$(".btn.danger").button("toggle").addClass("fat")</pre>
           <p>All methods should accept an optional options object, a string which targets a particular method, or nothing (which initiates a plugin with default behavior):</p>
 <pre class="prettyprint linenums">
@@ -135,7 +135,7 @@ $("#myModal").modal('show')                // initializes and invokes show immed
           <p>Each plugin also exposes it's raw constructor on a `Constructor` property: <code>$.fn.popover.Constructor</code>. If you'd like to get a particular plugin instance, retrieve it directly from an element: <code>$('[rel=popover]').data('popover')</code>.</p>
 
           <h3>Events</h3>
-          <p>Bootstrap provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and it's past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
+          <p>PyroCMS provides custom events for most plugin's unique actions. Generally, these come in an infinitive and past participle form - where the infinitive (ex. <code>show</code>) is triggered at the start of an event, and it's past participle form (ex. <code>shown</code>) is trigger on the completion of an action.</p>
           <p>All infinitive events provide preventDefault functionality. This provides the abililty to stop the execution of an action before it starts.</p>
 <pre class="prettyprint linenums">
 $('#myModal').on('show', function (e) {
@@ -340,7 +340,7 @@ $('#myModal').modal({
           <p>Manually hides a modal.</p>
           <pre class="prettyprint linenums">$('#myModal').modal('hide')</pre>
           <h3>Events</h3>
-          <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+          <p>PyroCMS's modal class exposes a few events for hooking into modal functionality.</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -685,7 +685,7 @@ $('#myTab li:eq(2) a').tab('show'); // Select third tab (0-indexed)
 </pre>
 
           <h3>Markup</h3>
-          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the Bootstrap tab styling.</p>
+          <p>You can activate a tab or pill navigation without writing any JavaScript by simply specifying <code>data-toggle="tab"</code> or <code>data-toggle="pill"</code> on an element. Adding the <code>nav</code> and <code>nav-tabs</code> classes to the tab <code>ul</code> will apply the PyroCMS tab styling.</p>
 <pre class="prettyprint linenums">
 &lt;ul class="nav nav-tabs"&gt;
   &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
@@ -1075,7 +1075,7 @@ $('a[data-toggle="tab"]').on('shown', function (e) {
 
 
         <h3>Events</h3>
-        <p>Bootstrap's alert class exposes a few events for hooking into alert functionality.</p>
+        <p>PyroCMS's alert class exposes a few events for hooking into alert functionality.</p>
         <table class="table table-bordered table-striped">
           <thead>
            <tr>
@@ -1356,7 +1356,7 @@ $('#myCollapsible').collapse({
             <p>Hides a collapsible element.</p>
 
             <h3>Events</h3>
-            <p>Bootstrap's collapse class exposes a few events for hooking into collapse functionality.</p>
+            <p>PyroCMS's collapse class exposes a few events for hooking into collapse functionality.</p>
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
@@ -1510,7 +1510,7 @@ $('.carousel').carousel({
             <p>Cycles to the next item.</p>
 
             <h3>Events</h3>
-            <p>Bootstrap's carousel class exposes two events for hooking into carousel functionality.</p>
+            <p>PyroCMS's carousel class exposes two events for hooking into carousel functionality.</p>
             <table class="table table-bordered table-striped">
               <thead>
                <tr>
