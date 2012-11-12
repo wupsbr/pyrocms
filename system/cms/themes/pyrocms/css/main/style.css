@@ -175,7 +175,6 @@ body {
   height: 100%;
   min-height: 100%;
   background-color: #eeeeee;
-  background-image: url("../../img/bg-grain.png");
   background-repeat: repeat;
 }
 #page {
@@ -9266,13 +9265,15 @@ nav#shortcuts ul li a:hover
   color: #999999;
   text-shadow: 0 2px 1px #ffffff;
   font-weight: 400;
+  position: relative;
+  text-indent: 30px;
 }
-.title h4 i {
-  margin-top: 1px;
-  filter: alpha(opacity=80);
-  -khtml-opacity: .8;
-  -moz-opacity: .8;
-  opacity: .8;
+.title h4 i:before {
+  color: #999999;
+  position: absolute;
+  text-shadow: 0 2px 1px #ffffff;
+  top: -4px;
+  left: -30px;
 }
 .title h4 .button {
   margin-top: -5px;

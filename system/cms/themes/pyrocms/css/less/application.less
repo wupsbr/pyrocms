@@ -794,15 +794,17 @@ nav#shortcuts ul li a:hover
 	color:@grayLight;
 	text-shadow:0 2px 1px @white;
 	font-weight:400;
+	position: relative;
+	text-indent: 30px;
 	//text-transform:uppercase;
 }
 
-.title h4 i {
-	margin-top:1px;
-	filter:alpha(opacity=80);
-	-khtml-opacity:.8;
-	-moz-opacity:.8;
-	opacity:.8;
+.title h4 i:before {
+	color: @grayLight;
+	position: absolute;
+	text-shadow:0 2px 1px @white;
+	top: -4px;
+	left: -30px;
 }
 
 .title h4 .button {
