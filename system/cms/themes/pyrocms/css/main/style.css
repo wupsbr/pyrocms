@@ -1,4 +1,4 @@
-background: #993505 url("../../img/nav-bg@1x.jpg") repeat-x;/*!
+background: #993505 url("../../img/nav-bg@1x.png") repeat-x;/*!
  * Bootstrap v2.2.2
  *
  * Copyright 2012 Twitter, Inc
@@ -6003,7 +6003,7 @@ input[type="submit"].btn.btn-mini {
   min-height: 40px;
   padding-left: 20px;
   padding-right: 20px;
-  background: #993505 url("../../img/nav-bg@1x.jpg") repeat-x;
+  background: #993505 url("../../img/nav-bg@1x.png") repeat-x;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -9695,8 +9695,8 @@ span.cke_skin_kama {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
   .navbar-inner {
-    background: #993505 url("../../img/nav-bg@2x.jpg") repeat-x;
-    background-size: 50% 50%;
+    background: #993505 url("../../img/nav-bg@2x.png") repeat-x;
+    background-size: 113px 40px;
   }
 }
 /* iPad Retina Displays (Tip: Best used only for image replacement)
