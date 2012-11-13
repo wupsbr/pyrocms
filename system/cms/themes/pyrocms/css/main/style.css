@@ -9620,10 +9620,6 @@ span.cke_skin_kama {
 ----------------------------------------*/
 @media (max-width: 767px) {
   /* Styles */
-  .navbar-inner {
-    background: #993505 url("../../img/nav-bg@2x.jpg") repeat-x;
-    background-size: 50%;
-  }
   section {
     margin: 0 -10px 20px -10px;
     padding: 0 10px 10px 10px;
@@ -9698,6 +9694,10 @@ span.cke_skin_kama {
 ------------------------------------------------------------------ */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
+  .navbar-inner {
+    background: #993505 url("../../img/nav-bg@2x.jpg") repeat-x;
+    background-size: 50% 50%;
+  }
 }
 /* iPad Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
