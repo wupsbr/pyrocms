@@ -1,0 +1,135 @@
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: "";
+  line-height: 0;
+}
+.clearfix:after {
+  clear: both;
+}
+.hide-text {
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+.input-block-level {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/*
+.box-shadow(@shadow) {
+  -webkit-box-shadow: @shadow;
+     -moz-box-shadow: @shadow;
+          box-shadow: @shadow;
+}
+*/
+/** login Styles **/
+body {
+  background: color:#838383;
+  font: 13px/1.5 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, sans-serif;
+}
+.account-container {
+  width: 380px;
+  display: block;
+  margin: 60px auto 0 auto;
+  background: #f9f9f9;
+  border: 1px solid #d5d5d5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 2px #dadada, inset 0px -3px 0px #e6e6e6;
+}
+.content {
+  padding: 16px 28px 4px;
+  text-align: center;
+}
+#login-logo {
+  display: inline-block;
+  background-image: url('../../img/admin/login-logo.png');
+  background-repeat: no-repeat;
+  width: 103px;
+  height: 43px;
+  margin: 10px 0px;
+}
+.login-fields {
+  margin-bottom: 10px;
+}
+.login-fields .field {
+  margin-bottom: 1.25em;
+  text-align: center;
+}
+.login-fields label {
+  display: none;
+}
+.login-fields input {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 10px;
+  box-shadow: inset 2px 2px 4px #f1f1f1;
+}
+.login-actions {
+  float: left;
+  text-align: left;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.login-actions > label {
+  clear: none;
+  height: 15px;
+  display: inline-block;
+  padding-top: 8px;
+  margin-top: 0;
+  font-size: 12px;
+  line-height: 20px;
+  cursor: pointer;
+}
+.login-actions > label + input[type='checkbox'] {
+  opacity: 1;
+  float: left;
+  width: 15px;
+  margin: 0 0 ;
+}
+/** Text Under Box**/
+.login-extra {
+  display: block;
+  width: 300px;
+  margin: 1.5em auto;
+  text-align: center;
+  line-height: 19px;
+  text-shadow: 1px 1px 0px #fff;
+}
+.account-container h1 {
+  margin-bottom: .4em;
+  color: #f90;
+}
+/** Buttons **/
+.btn {
+  float: right;
+}
+@media (max-width: 480px) {
+  .account-container {
+    width: 100%;
+    margin-top: 35px;
+  }
+  .login-actions {
+    text-align: center;
+  }
+  .login-actions > label {
+    margin-bottom: 10px;
+  }
+  .login-actions .btn {
+    display: block;
+    width: 100%;
+    float: none;
+  }
+}

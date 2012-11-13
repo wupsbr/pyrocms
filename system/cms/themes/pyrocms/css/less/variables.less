@@ -171,7 +171,7 @@
 // Hr border color
 // -------------------------
 @hrBorder:                @grayLighter;
-@hrBorderDark:			  @black;
+@hrBorderDark:			  		@black;
 
 
 // Horizontal forms & lists
@@ -190,16 +190,19 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    40px;
-@navbarBackgroundHighlight:       #ffffff;
+@navBackground1x:									"../../img/nav-bg@1x.jpg";
+@navBackground2x:									"../../img/nav-bg@2x.jpg";
+@navbarBackgroundHighlight:       #b23d06;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
 
-@navbarText:                      #777;
-@navbarLinkColor:                 #777;
-@navbarLinkColorHover:            @grayDark;
-@navbarLinkColorActive:           @gray;
+@navbarText:                      @white;
+@navbarLinkColor:                 @white;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+@navbarLinkBackgroundActive:			rgba(0,0,0,.2);
+//@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
