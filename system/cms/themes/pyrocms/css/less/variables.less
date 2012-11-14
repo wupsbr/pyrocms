@@ -34,6 +34,9 @@
 // PyroCMS colors
 // -------------------------
 @pyroOrange:            #ff9a00;
+@pyroHighlight:					#ffd253;
+@pyroShadow:						#994412;
+//@pyroOrange:            #F8781B;
 
 // Scaffolding
 // -------------------------
@@ -189,20 +192,22 @@
 @navbarCollapseWidth:             979px;
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
-@navbarHeight:                    40px;
+@navbarHeight:                    45px;
 @navBackground1x:									"../../img/nav-bg@1x.png";
 @navBackground2x:									"../../img/nav-bg@2x.png";
-@navbarBackgroundHighlight:       #b23d06;
+@navbarBackgroundHighlight:       #F8781B;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 5%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
+@navbarTopBorder:									@pyroHighlight;
+@navbarBottomBorder:							@pyroShadow;
 
 @navbarText:                      @white;
 @navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
-@navbarLinkBackgroundActive:			rgba(0,0,0,.2);
-//@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
+//@navbarLinkBackgroundActive:			rgba(0,0,0,.2);
+@navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
 @navbarBrandColor:                @navbarLinkColor;
 

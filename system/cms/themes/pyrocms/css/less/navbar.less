@@ -23,9 +23,10 @@
   min-height: @navbarHeight;
   padding-left:  20px;
   padding-right: 20px;
-  //#gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
+  #gradient > .vertical(@navbarBackgroundHighlight, @navbarBackground);
   background: @navbarBackground url(@navBackground1x) repeat-x;
-  //border: 1px solid @navbarBorder;
+  border-top: 1px solid @navbarTopBorder;
+  border-bottom: 4px solid @navbarBottomBorder;
   .border-radius(@baseBorderRadius);
   .box-shadow(0 1px 4px rgba(0,0,0,.065));
 

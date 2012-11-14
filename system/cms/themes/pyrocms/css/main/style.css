@@ -1,4 +1,4 @@
-background: #993505 url("../../img/nav-bg@1x.png") repeat-x;/*!
+background: #f26a07 url("../../img/nav-bg@1x.png") repeat-x;/*!
  * Bootstrap v2.2.2
  *
  * Copyright 2012 Twitter, Inc
@@ -6000,10 +6000,20 @@ input[type="submit"].btn.btn-mini {
   *z-index: 2;
 }
 .navbar-inner {
-  min-height: 40px;
+  min-height: 45px;
   padding-left: 20px;
   padding-right: 20px;
-  background: #993505 url("../../img/nav-bg@1x.png") repeat-x;
+  background-color: #f67213;
+  background-image: -moz-linear-gradient(top, #f8781b, #f26a07);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f8781b), to(#f26a07));
+  background-image: -webkit-linear-gradient(top, #f8781b, #f26a07);
+  background-image: -o-linear-gradient(top, #f8781b, #f26a07);
+  background-image: linear-gradient(to bottom, #f8781b, #f26a07);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff8781b', endColorstr='#fff26a07', GradientType=0);
+  background: #f26a07 url("../../img/nav-bg@1x.png") repeat-x;
+  border-top: 1px solid #ffd253;
+  border-bottom: 4px solid #994412;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -6040,19 +6050,19 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 10px 20px 10px;
+  padding: 12.5px 20px 12.5px;
   margin-left: -20px;
   font-size: 20px;
   font-weight: 200;
   color: #ffffff;
-  text-shadow: 0 1px 0 #b23d06;
+  text-shadow: 0 1px 0 #f8781b;
 }
 .navbar .brand:hover {
   text-decoration: none;
 }
 .navbar-text {
   margin-bottom: 0;
-  line-height: 40px;
+  line-height: 45px;
 }
 .navbar-link {
   color: #ffffff;
@@ -6061,14 +6071,14 @@ input[type="submit"].btn.btn-mini {
   color: #ffffff;
 }
 .navbar .divider-vertical {
-  height: 40px;
+  height: 45px;
   margin: 0 9px;
-  border-left: 1px solid #993505;
-  border-right: 1px solid #b23d06;
+  border-left: 1px solid #f26a07;
+  border-right: 1px solid #f8781b;
 }
 .navbar .btn,
 .navbar .btn-group {
-  margin-top: 5px;
+  margin-top: 7.5px;
 }
 .navbar .btn-group .btn,
 .navbar .input-prepend .btn,
@@ -6101,7 +6111,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-form select,
 .navbar-form .radio,
 .navbar-form .checkbox {
-  margin-top: 5px;
+  margin-top: 7.5px;
 }
 .navbar-form input,
 .navbar-form select,
@@ -6126,7 +6136,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search {
   position: relative;
   float: left;
-  margin-top: 5px;
+  margin-top: 7.5px;
   margin-bottom: 0;
 }
 .navbar-search .search-query {
@@ -6210,10 +6220,10 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li > a {
   float: none;
-  padding: 10px 15px 10px;
+  padding: 12.5px 15px 12.5px;
   color: #ffffff;
   text-decoration: none;
-  text-shadow: 0 1px 1px #b23d06;
+  text-shadow: 0 1px 1px #f8781b;
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 8px;
@@ -6229,7 +6239,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a:focus {
   color: #ffffff;
   text-decoration: none;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #d95f07;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -6242,17 +6252,17 @@ input[type="submit"].btn.btn-mini {
   margin-right: 5px;
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #8f3105;
-  background-image: -moz-linear-gradient(top, #993505, #812c04);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#993505), to(#812c04));
-  background-image: -webkit-linear-gradient(top, #993505, #812c04);
-  background-image: -o-linear-gradient(top, #993505, #812c04);
-  background-image: linear-gradient(to bottom, #993505, #812c04);
+  background-color: #e86607;
+  background-image: -moz-linear-gradient(top, #f26a07, #d95f07);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f26a07), to(#d95f07));
+  background-image: -webkit-linear-gradient(top, #f26a07, #d95f07);
+  background-image: -o-linear-gradient(top, #f26a07, #d95f07);
+  background-image: linear-gradient(to bottom, #f26a07, #d95f07);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff993505', endColorstr='#ff812c04', GradientType=0);
-  border-color: #812c04 #812c04 #371302;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff26a07', endColorstr='#ffd95f07', GradientType=0);
+  border-color: #d95f07 #d95f07 #8f3f04;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #812c04;
+  *background-color: #d95f07;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -6266,12 +6276,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-navbar.disabled,
 .navbar .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #812c04;
-  *background-color: #682404;
+  background-color: #d95f07;
+  *background-color: #c15406;
 }
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-  background-color: #4f1b03 \9;
+  background-color: #a84a05 \9;
 }
 .navbar .btn-navbar:hover,
 .navbar .btn-navbar:active,
@@ -6279,12 +6289,12 @@ input[type="submit"].btn.btn-mini {
 .navbar .btn-navbar.disabled,
 .navbar .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #812c04;
-  *background-color: #682404;
+  background-color: #d95f07;
+  *background-color: #c15406;
 }
 .navbar .btn-navbar:active,
 .navbar .btn-navbar.active {
-  background-color: #4f1b03 \9;
+  background-color: #a84a05 \9;
 }
 .navbar .btn-navbar .icon-bar {
   display: block;
@@ -6338,7 +6348,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle,
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: #d95f07;
   color: #ffffff;
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
@@ -9695,8 +9705,8 @@ span.cke_skin_kama {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
   /* Styles */
   .navbar-inner {
-    background: #993505 url("../../img/nav-bg@2x.png") repeat-x;
-    background-size: 113px 40px;
+    background: #f26a07 url("../../img/nav-bg@2x.png") repeat-x;
+    background-size: 113px 60px;
   }
 }
 /* iPad Retina Displays (Tip: Best used only for image replacement)
