@@ -42,29 +42,29 @@ footer form {
 @media (min-width: 480px) and (max-width: 767px) {
 /* Styles */
 
-}
+}// !end Media Query
 
 /*:::PRIMARY:::*//* Landscape phones and down 
 ---------------------------------------------------------------------*/
 @media (max-width: 480px) {
 /* Styles */
 
-}
+}// !end Media Query
 
 /*:::PRIMARY:::*//* Portrait tablet to landscape and desktop 
 ------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 979px) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 
 /* iPads (portrait and landscape) 
 ---------------------------------------------------------------------------------------*/
 @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 /* iPads (landscape) 
 ------------------------ */
@@ -72,9 +72,9 @@ footer form {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : landscape) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 /* iPads (portrait)
 ----------------------- */
@@ -82,35 +82,41 @@ and (orientation : landscape) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
 and (orientation : portrait) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 /* Slidely Wide Desktop Display
 ------------------------------------*/
 @media (min-width: 980px) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 /* Large Desktop Displays 
 ----------------------------------------*/
 @media (min-width: 1200px) {
-/* Styles */
-}
+// Styles
+
+}// !end Media Query
 
 /* Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
 @media 
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5) {
-/* Styles */
-.navbar-inner {
-	background: @navbarBackground url(@navBackground2x) repeat-x;
-	background-size: 113px 60px;
+// Styles
+// !Pyro mobile navbar
+// -------------------------
+
+.navbar-pyro {
+  .navbar-inner {
+    background: @navbarPyroBackground url(@navbarPyroBackground2x) repeat-x;
+    .background-size(@navbarBackgroundImageWidth @navbarBackgroundImageHeight);
+  }
 }
 
-}
+}// !end Media Query
 
 /* iPad Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
@@ -118,9 +124,9 @@ only screen and (min-device-pixel-ratio : 1.5) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)
 and (max-device-width: 1024px) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query
 
 /* iPhone Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
@@ -128,6 +134,6 @@ and (max-device-width: 1024px) {
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
 only screen and (min-device-pixel-ratio : 1.5)
 and (max-device-width: 480px) {
-/* Styles */
+// Styles
 
-}
+}// !end Media Query

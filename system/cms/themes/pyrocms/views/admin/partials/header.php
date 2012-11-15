@@ -3,7 +3,7 @@
 		<span>PyroCMS requires that JavaScript be turned on for many of the functions to work correctly. Please turn JavaScript on and reload the page.</span>
 	</noscript>
 	
-	<div class="navbar navbar-static-top">
+	<div class="navbar navbar-pyro navbar-static-top">
 		<div class="navbar-inner">
 			<div class="container">
 				<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">

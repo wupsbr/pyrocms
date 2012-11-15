@@ -1,12 +1,12 @@
 //
-// Mixins
+// !Mixins
 // --------------------------------------------------
 
 
-// UTILITY MIXINS
+// !UTILITY MIXINS
 // --------------------------------------------------
 
-// Clearfix
+// !Clearfix
 // --------
 // For clearing floats like a boss h5bp.com/q
 .clearfix {
@@ -24,7 +24,7 @@
   }
 }
 
-// Webkit-style focus
+// !Webkit-style focus
 // ------------------
 .tab-focus() {
   // Default
@@ -35,7 +35,7 @@
   //outline-offset: -2px;
 }
 
-// Center-align a block level element
+// !Center-align a block level element
 // ----------------------------------
 .center-block() {
   display: block;
@@ -43,7 +43,7 @@
   margin-right: auto;
 }
 
-// IE7 inline-block
+// !IE7 inline-block
 // ----------------
 .ie7-inline-block() {
   *display: inline; /* IE7 inline-block hack */
@@ -68,7 +68,7 @@
   *margin-right: .3em;
 }
 
-// Sizing shortcuts
+// !Sizing shortcuts
 // -------------------------
 .size(@height, @width) {
   width: @width;
@@ -78,7 +78,7 @@
   .size(@size, @size);
 }
 
-// Placeholder text
+// !Placeholder text
 // -------------------------
 .placeholder(@color: @placeholderText) {
   &:-moz-placeholder {
@@ -92,7 +92,7 @@
   }
 }
 
-// Text overflow
+// !Text overflow
 // -------------------------
 // Requires inline-block or block for proper styling
 .text-overflow() {
@@ -101,7 +101,7 @@
   white-space: nowrap;
 }
 
-// CSS image replacement
+// !CSS image replacement
 // -------------------------
 // Source: https://github.com/h5bp/html5-boilerplate/commit/aa0396eae757
 .hide-text {
@@ -113,7 +113,7 @@
 }
 
 
-// FONTS
+// !FONTS
 // --------------------------------------------------
 
 #font {
@@ -148,10 +148,10 @@
 }
 
 
-// FORMS
+// !FORMS
 // --------------------------------------------------
 
-// Block level inputs
+// !Block level inputs
 .input-block-level {
   display: block;
   width: 100%;
@@ -161,7 +161,7 @@
 
 
 
-// Mixin for form field states
+// !Mixin for form field states
 .formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
   // Set the text color
   > label,
@@ -199,17 +199,17 @@
 
 
 
-// CSS3 PROPERTIES
+// !CSS3 PROPERTIES
 // --------------------------------------------------
 
-// Border Radius
+// !Border Radius
 .border-radius(@radius) {
   -webkit-border-radius: @radius;
      -moz-border-radius: @radius;
           border-radius: @radius;
 }
 
-// Single Corner Border Radius
+// !Single Corner Border Radius
 .border-top-left-radius(@radius) {
   -webkit-border-top-left-radius: @radius;
       -moz-border-radius-topleft: @radius;
@@ -231,7 +231,7 @@
           border-bottom-left-radius: @radius;
 }
 
-// Single Side Border Radius
+// !Single Side Border Radius
 .border-top-radius(@radius) {
   .border-top-right-radius(@radius);
   .border-top-left-radius(@radius);
@@ -249,7 +249,7 @@
   .border-bottom-left-radius(@radius);
 }
 
-// Drop shadows
+// !Drop shadows
 /*
 .box-shadow(@shadow) {
   -webkit-box-shadow: @shadow;
@@ -266,7 +266,7 @@
           box-shadow: @props;
 }
 
-// Transitions
+// !Transitions
 .transition(@transition) {
   -webkit-transition: @transition;
      -moz-transition: @transition;
@@ -280,7 +280,7 @@
           transition-delay: @transition-delay;
 }
 
-// Animations
+// !Animations
 .animation-duration(@animation-duration) {
   -webkit-animation-duration: @animation-duration;
      -moz-animation-duration: @animation-duration;
@@ -305,7 +305,7 @@
           animation-iteration-count: @animation-iteration-count;
 }
 
-// Transformations
+// !Transformations
 .rotate(@degrees) {
   -webkit-transform: rotate(@degrees);
      -moz-transform: rotate(@degrees);
@@ -342,7 +342,7 @@
           transform: translate3d(@x, @y, @z);
 }
 
-// Backface visibility
+// !Backface visibility
 // Prevent browsers from flickering when using CSS 3D transforms.
 // Default value is `visible`, but can be changed to `hidden
 // See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples
@@ -352,7 +352,7 @@
 	        backface-visibility: @visibility;
 }
 
-// Background clipping
+// !Background clipping
 // Heads up: FF 3.6 and under need "padding" instead of "padding-box"
 .background-clip(@clip) {
   -webkit-background-clip: @clip;
@@ -360,7 +360,7 @@
           background-clip: @clip;
 }
 
-// Background sizing
+// !Background sizing
 .background-size(@size) {
   -webkit-background-size: @size;
      -moz-background-size: @size;
@@ -369,14 +369,14 @@
 }
 
 
-// Box sizing
+// !Box sizing
 .box-sizing(@boxmodel) {
   -webkit-box-sizing: @boxmodel;
      -moz-box-sizing: @boxmodel;
           box-sizing: @boxmodel;
 }
 
-// User select
+// !User select
 // For selecting text on the page
 .user-select(@select) {
   -webkit-user-select: @select;
@@ -386,13 +386,13 @@
           user-select: @select;
 }
 
-// Resize anything
+// !Resize anything
 .resizable(@direction) {
   resize: @direction; // Options: horizontal, vertical, both
   overflow: auto; // Safari fix
 }
 
-// CSS3 Content Columns
+// !CSS3 Content Columns
 .content-columns(@columnCount, @columnGap: @gridGutterWidth) {
   -webkit-column-count: @columnCount;
      -moz-column-count: @columnCount;
@@ -402,7 +402,7 @@
           column-gap: @columnGap;
 }
 
-// Optional hyphenation
+// !Optional hyphenation
 .hyphens(@mode: auto) {
   word-wrap: break-word;
   -webkit-hyphens: @mode;
@@ -412,18 +412,17 @@
           hyphens: @mode;
 }
 
-// Opacity
+// !Opacity
 .opacity(@opacity) {
   opacity: @opacity / 100;
   filter: ~"alpha(opacity=@{opacity})";
 }
 
 
-
-// BACKGROUNDS
+// !BACKGROUNDS
 // --------------------------------------------------
 
-// Add an alphatransparency value to any background or border color (via Elyse Holladay)
+// !Add an alphatransparency value to any background or border color (via Elyse Holladay)
 #translucent {
   .background(@color: @white, @alpha: 1) {
     background-color: hsla(hue(@color), saturation(@color), lightness(@color), @alpha);
@@ -434,7 +433,7 @@
   }
 }
 
-// Gradient Bar Colors for buttons and alerts
+// !Gradient Bar Colors for buttons and alerts
 .gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
   color: @textColor;
   text-shadow: @textShadow;
@@ -443,7 +442,7 @@
   border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
 }
 
-// Gradients
+// !Gradients
 #gradient {
   .horizontal(@startColor: #555, @endColor: #333) {
     background-color: @endColor;
@@ -510,14 +509,14 @@
     background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
   }
 }
-// Reset filters for IE
+// !Reset filters for IE
 .reset-filter() {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
 
 
-// COMPONENT MIXINS
+// !COMPONENT MIXINS
 // --------------------------------------------------
 
 // Horizontal dividers
@@ -537,7 +536,7 @@
   border-bottom: 1px solid @bottom;
 }
 
-// Button backgrounds
+// !Button backgrounds
 // ------------------
 .buttonBackground(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
@@ -559,7 +558,7 @@
   }
 }
 
-// Navbar vertical align
+// !Navbar vertical align
 // -------------------------
 // Vertically center elements in the navbar.
 // Example: an element has a height of 30px, so write out `.navbarVerticalAlign(30px);` to calculate the appropriate top margin.
@@ -567,9 +566,7 @@
   margin-top: (@navbarHeight - @elementHeight) / 2;
 }
 
-
-
-// Grid System
+// !Grid System
 // -----------
 
 // Centered container element
@@ -579,14 +576,14 @@
   .clearfix();
 }
 
-// Table columns
+// !Table columns
 .tableColumns(@columnSpan: 1) {
   float: none; // undo default grid column styles
   width: ((@gridColumnWidth) * @columnSpan) + (@gridGutterWidth * (@columnSpan - 1)) - 16; // 16 is total padding on left and right of table cells
   margin-left: 0; // undo default grid column styles
 }
 
-// Make a Grid
+// !Make a Grid
 // Use .makeRow and .makeColumn to assign semantic layouts grid system behavior
 .makeRow() {
   margin-left: @gridGutterWidth * -1;
@@ -598,7 +595,7 @@
   width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
 }
 
-// The Grid
+// !The Grid
 #grid {
 
   .core (@gridColumnWidth, @gridGutterWidth) {

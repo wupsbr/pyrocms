@@ -1,4 +1,4 @@
-background: #f06c03 url("../../img/nav-bg@1x.png") repeat-x;/*!
+/*!
  * Bootstrap v2.2.2
  *
  * Copyright 2012 Twitter, Inc
@@ -4201,8 +4201,8 @@ table th[class*="span"],
 .nav-pills > .active > a > [class*=" icon-"],
 .nav-list > .active > a > [class^="icon-"],
 .nav-list > .active > a > [class*=" icon-"],
-.navbar-inverse .nav > .active > a > [class^="icon-"],
-.navbar-inverse .nav > .active > a > [class*=" icon-"],
+.navbar-pyro .nav > .active > a > [class^="icon-"],
+.navbar-pyro .nav > .active > a > [class*=" icon-"],
 .dropdown-menu > li > a:hover > [class^="icon-"],
 .dropdown-menu > li > a:hover > [class*=" icon-"],
 .dropdown-menu > .active > a > [class^="icon-"],
@@ -6011,9 +6011,7 @@ input[type="submit"].btn.btn-mini {
   background-image: linear-gradient(to bottom, #fc872a, #f06c03);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffc872a', endColorstr='#fff06c03', GradientType=0);
-  background: #f06c03 url("../../img/nav-bg@1x.png") repeat-x;
-  border-top: 1px solid #ffd253;
-  border-bottom: 4px solid #994412;
+  border: 1px solid #b35103;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
@@ -6217,6 +6215,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar .nav > li {
   float: left;
+  line-height: 21px;
 }
 .navbar .nav > li > a {
   float: none;
@@ -6388,70 +6387,73 @@ input[type="submit"].btn.btn-mini {
   -moz-border-radius: 6px 0 6px 6px;
   border-radius: 6px 0 6px 6px;
 }
-.navbar-inverse {
-  color: #999999;
-}
-.navbar-inverse .navbar-inner {
-  background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #222222, #111111);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
-  background-image: -webkit-linear-gradient(top, #222222, #111111);
-  background-image: -o-linear-gradient(top, #222222, #111111);
-  background-image: linear-gradient(to bottom, #222222, #111111);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff222222', endColorstr='#ff111111', GradientType=0);
-  border-color: #252525;
-}
-.navbar-inverse .brand,
-.navbar-inverse .nav > li > a {
-  color: #999999;
-  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-}
-.navbar-inverse .brand:hover,
-.navbar-inverse .nav > li > a:hover {
+.navbar-pyro {
   color: #ffffff;
 }
-.navbar-inverse .nav > li > a:focus,
-.navbar-inverse .nav > li > a:hover {
+.navbar-pyro .navbar-inner {
+  background-color: #f16f24;
+  background-image: -moz-linear-gradient(top, #f88626, #e64d20);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f88626), to(#e64d20));
+  background-image: -webkit-linear-gradient(top, #f88626, #e64d20);
+  background-image: -o-linear-gradient(top, #f88626, #e64d20);
+  background-image: linear-gradient(to bottom, #f88626, #e64d20);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff88626', endColorstr='#ffe64d20', GradientType=0);
+  background: #e64d20 url("../../img/nav-bg@1x.png") repeat-x;
+  border-color: #ffd253;
+  border-top: 1px solid #ffd253;
+  border-bottom: 1px solid #952f0a;
+}
+.navbar-pyro .brand,
+.navbar-pyro .nav > li > a {
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+}
+.navbar-pyro .brand:hover,
+.navbar-pyro .nav > li > a:hover {
+  color: #ffffff;
+}
+.navbar-pyro .nav > li > a:focus,
+.navbar-pyro .nav > li > a:hover {
   background-color: transparent;
   color: #ffffff;
 }
-.navbar-inverse .nav .active > a,
-.navbar-inverse .nav .active > a:hover,
-.navbar-inverse .nav .active > a:focus {
+.navbar-pyro .nav .active > a,
+.navbar-pyro .nav .active > a:hover,
+.navbar-pyro .nav .active > a:focus {
   color: #ffffff;
-  background-color: #111111;
+  background-color: #952f0a;
 }
-.navbar-inverse .navbar-link {
-  color: #999999;
-}
-.navbar-inverse .navbar-link:hover {
+.navbar-pyro .navbar-link {
   color: #ffffff;
 }
-.navbar-inverse .divider-vertical {
-  border-left-color: #111111;
-  border-right-color: #222222;
-}
-.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
-.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
-.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
-  background-color: #111111;
+.navbar-pyro .navbar-link:hover {
   color: #ffffff;
 }
-.navbar-inverse .nav li.dropdown > .dropdown-toggle .caret {
-  border-top-color: #999999;
-  border-bottom-color: #999999;
+.navbar-pyro .divider-vertical {
+  border-left-color: #e64d20;
+  border-right-color: #f88626;
 }
-.navbar-inverse .nav li.dropdown.open > .dropdown-toggle .caret,
-.navbar-inverse .nav li.dropdown.active > .dropdown-toggle .caret,
-.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle .caret {
+.navbar-pyro .nav li.dropdown.open > .dropdown-toggle,
+.navbar-pyro .nav li.dropdown.active > .dropdown-toggle,
+.navbar-pyro .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #952f0a;
+  color: #ffffff;
+}
+.navbar-pyro .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #ffffff;
   border-bottom-color: #ffffff;
 }
-.navbar-inverse .navbar-search .search-query {
+.navbar-pyro .nav li.dropdown.open > .dropdown-toggle .caret,
+.navbar-pyro .nav li.dropdown.active > .dropdown-toggle .caret,
+.navbar-pyro .nav li.dropdown.open.active > .dropdown-toggle .caret {
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
+}
+.navbar-pyro .navbar-search .search-query {
   color: #ffffff;
-  background-color: #515151;
-  border-color: #111111;
+  background-color: #f3a993;
+  border-color: #e64d20;
   -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   -moz-box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
   box-shadow: inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15);
@@ -6460,26 +6462,26 @@ input[type="submit"].btn.btn-mini {
   -o-transition: none;
   transition: none;
 }
-.navbar-inverse .navbar-search .search-query:-moz-placeholder {
+.navbar-pyro .navbar-search .search-query:-moz-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+.navbar-pyro .navbar-search .search-query:-ms-input-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
+.navbar-pyro .navbar-search .search-query::-webkit-input-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query:-moz-placeholder {
+.navbar-pyro .navbar-search .search-query:-moz-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query:-ms-input-placeholder {
+.navbar-pyro .navbar-search .search-query:-ms-input-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query::-webkit-input-placeholder {
+.navbar-pyro .navbar-search .search-query::-webkit-input-placeholder {
   color: #cccccc;
 }
-.navbar-inverse .navbar-search .search-query:focus,
-.navbar-inverse .navbar-search .search-query.focused {
+.navbar-pyro .navbar-search .search-query:focus,
+.navbar-pyro .navbar-search .search-query.focused {
   padding: 5px 15px;
   color: #333333;
   text-shadow: 0 1px 0 #ffffff;
@@ -6490,49 +6492,49 @@ input[type="submit"].btn.btn-mini {
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
   outline: 0;
 }
-.navbar-inverse .btn-navbar {
+.navbar-pyro .btn-navbar {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #0e0e0e;
-  background-image: -moz-linear-gradient(top, #151515, #040404);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#151515), to(#040404));
-  background-image: -webkit-linear-gradient(top, #151515, #040404);
-  background-image: -o-linear-gradient(top, #151515, #040404);
-  background-image: linear-gradient(to bottom, #151515, #040404);
+  background-color: #e96312;
+  background-image: -moz-linear-gradient(top, #f7780d, #d54318);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#f7780d), to(#d54318));
+  background-image: -webkit-linear-gradient(top, #f7780d, #d54318);
+  background-image: -o-linear-gradient(top, #f7780d, #d54318);
+  background-image: linear-gradient(to bottom, #f7780d, #d54318);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff151515', endColorstr='#ff040404', GradientType=0);
-  border-color: #040404 #040404 #000000;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff7780d', endColorstr='#ffd54318', GradientType=0);
+  border-color: #d54318 #d54318 #902d10;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #040404;
+  *background-color: #d54318;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
 }
-.navbar-inverse .btn-navbar:hover,
-.navbar-inverse .btn-navbar:active,
-.navbar-inverse .btn-navbar.active,
-.navbar-inverse .btn-navbar.disabled,
-.navbar-inverse .btn-navbar[disabled] {
+.navbar-pyro .btn-navbar:hover,
+.navbar-pyro .btn-navbar:active,
+.navbar-pyro .btn-navbar.active,
+.navbar-pyro .btn-navbar.disabled,
+.navbar-pyro .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #040404;
-  *background-color: #000000;
+  background-color: #d54318;
+  *background-color: #be3c15;
 }
-.navbar-inverse .btn-navbar:active,
-.navbar-inverse .btn-navbar.active {
-  background-color: #000000 \9;
+.navbar-pyro .btn-navbar:active,
+.navbar-pyro .btn-navbar.active {
+  background-color: #a73413 \9;
 }
-.navbar-inverse .btn-navbar:hover,
-.navbar-inverse .btn-navbar:active,
-.navbar-inverse .btn-navbar.active,
-.navbar-inverse .btn-navbar.disabled,
-.navbar-inverse .btn-navbar[disabled] {
+.navbar-pyro .btn-navbar:hover,
+.navbar-pyro .btn-navbar:active,
+.navbar-pyro .btn-navbar.active,
+.navbar-pyro .btn-navbar.disabled,
+.navbar-pyro .btn-navbar[disabled] {
   color: #ffffff;
-  background-color: #040404;
-  *background-color: #000000;
+  background-color: #d54318;
+  *background-color: #be3c15;
 }
-.navbar-inverse .btn-navbar:active,
-.navbar-inverse .btn-navbar.active {
-  background-color: #000000 \9;
+.navbar-pyro .btn-navbar:active,
+.navbar-pyro .btn-navbar.active {
+  background-color: #a73413 \9;
 }
 .breadcrumb {
   padding: 8px 15px;
@@ -9451,9 +9453,8 @@ footer #pyroinfo {
   width: 400px;
 }
 footer p {
-  color: #666;
-  text-shadow: 0 1px 0 #000;
-  font-size: 12px;
+  color: #999999;
+  font-size: 14px;
   text-align: left;
 }
 /* !end Footer */
@@ -9675,51 +9676,53 @@ span.cke_skin_kama {
 /*:::PRIMARY:::*//* Portrait tablet to landscape and desktop 
 ------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 979px) {
-  /* Styles */
+  
 }
 /* iPads (portrait and landscape) 
 ---------------------------------------------------------------------------------------*/
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
-  /* Styles */
+  
 }
 /* iPads (landscape) 
 ------------------------ */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
-  /* Styles */
+  
 }
 /* iPads (portrait)
 ----------------------- */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
-  /* Styles */
+  
 }
 /* Slidely Wide Desktop Display
 ------------------------------------*/
 @media (min-width: 980px) {
-  /* Styles */
+  
 }
 /* Large Desktop Displays 
 ----------------------------------------*/
 @media (min-width: 1200px) {
-  /* Styles */
+  
 }
 /* Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
-  /* Styles */
-  .navbar-inner {
-    background: #f06c03 url("../../img/nav-bg@2x.png") repeat-x;
-    background-size: 113px 60px;
+  .navbar-pyro .navbar-inner {
+    background: #e64d20 url("../../img/nav-bg@2x.png") repeat-x;
+    -webkit-background-size: 113px 45px;
+    -moz-background-size: 113px 45px;
+    -o-background-size: 113px 45px;
+    background-size: 113px 45px;
   }
 }
 /* iPad Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) and (max-device-width: 1024px) {
-  /* Styles */
+  
 }
 /* iPhone Retina Displays (Tip: Best used only for image replacement)
 ------------------------------------------------------------------ */
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) and (max-device-width: 480px) {
-  /* Styles */
+  
 }
 .pull-right {
   float: right;

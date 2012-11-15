@@ -145,22 +145,8 @@ a:hover {
   text-decoration: none;
 }
 
-p,.glyphicons {
-	display:inline-block;
-	*display:inline;
-	*zoom:1;
-	width:240px;
-	font-size:18px;
-	line-height:48px;
-}
-
 p i:before,.glyphicons i:before {
 	line-height:55px!important;
-}
-
-p {
-	width:275px;
-	line-height:48px;
 }
 
 .white-content {
@@ -175,23 +161,6 @@ p {
 }
 
 /* Halflings */
-
-p,.halflings {
-	display:inline-block;
-	*display:inline;
-	*zoom:1;
-	width:175px;
-	font-size:14px;
-	line-height:14px;
-}
-
-p .halflings-icon,.halflings .halflings-icon {
-	margin:0 10px 0 0;
-}
-
-p {
-	width:200px;
-}
 
 .white-content {
 	margin:0 -20px;

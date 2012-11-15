@@ -35,25 +35,24 @@
 // -------------------------
 @pyroOrange:            #ff9a00;
 @pyroHighlight:					#ffd253;
-@pyroShadow:						#994412;
-//@pyroOrange:            #F8781B;
+@pyroShadow:						#952f0a;
 
 // Scaffolding
 // -------------------------
 @bodyBackground:        @grayLighter;
 @textColor:             @grayDark;
-@backgroundTile:		"../../img/bg_texture@1x.png";
-@blueishBackground:		"../../img/bg_blueish.jpg";
-@noise:					"../../img/bg-grain.png";
-@noiseDark:				"../../img/bg_noisedark.jpg";
-@classyDark:			"../../img/bg_classydark.jpg";
+@backgroundTile:				"../../img/bg_texture@1x.png";
+@blueishBackground:			"../../img/bg_blueish.jpg";
+@noise:									"../../img/bg-grain.png";
+@noiseDark:							"../../img/bg_noisedark.jpg";
+@classyDark:						"../../img/bg_classydark.jpg";
 
 // Links
 // -------------------------
 @linkColor:             @pyroOrange;
 @linkColorHover:        darken(@linkColor, 15%);
 @linkColorHoverLight:   @white;
-@linkColorActive:		darken(@linkColor, 15%);
+@linkColorActive:				darken(@linkColor, 15%);
 @linkColorActiveLight:	@linkColorHoverLight;
 
 
@@ -87,6 +86,11 @@
 @baseBorderRadius:      4px;
 @borderRadiusLarge:     6px;
 @borderRadiusSmall:     3px;
+
+// Retina Sizing
+// -------------------------
+// Adjusts all background sizes to half their actual size for retina displays
+@backgroundSizeRetina:	50% 50%;
 
 // Tables
 // -------------------------
@@ -193,42 +197,47 @@
 @navbarCollapseDesktopWidth:      @navbarCollapseWidth + 1;
 
 @navbarHeight:                    45px;
-@navBackground1x:									"../../img/nav-bg@1x.png";
-@navBackground2x:									"../../img/nav-bg@2x.png";
 @navbarBackgroundHighlight:       #FC872A;
 @navbarBackground:                darken(@navbarBackgroundHighlight, 10%);
 @navbarBorder:                    darken(@navbarBackground, 12%);
-@navbarTopBorder:									@pyroHighlight;
-@navbarBottomBorder:							@pyroShadow;
+@navbarTopBorder:									@navbarBorder;
+@navbarBottomBorder:							@navbarBorder;
 
 @navbarText:                      @white;
+@navbarTextShadow:                @white;
 @navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
-//@navbarLinkBackgroundActive:			rgba(0,0,0,.2);
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
 
 @navbarBrandColor:                @navbarLinkColor;
 
-// Inverted navbar
-@navbarInverseBackground:                #111111;
-@navbarInverseBackgroundHighlight:       #222222;
-@navbarInverseBorder:                    #252525;
+// Pyro navbar
+@navbarPyroBackground:                	#E64D20;
+@navbarPyroBackgroundHighlight:      		#F88626;
+@navbarPyroBorder:                    	@pyroHighlight;
+@navbarPyroTopBorder:										@pyroHighlight;
+@navbarPyroBottomBorder:								@pyroShadow;
+@navbarPyroBackground1x:								"../../img/nav-bg@1x.png";
+@navbarPyroBackground2x:								"../../img/nav-bg@2x.png";
+@navbarBackgroundImageHeight:						@navbarHeight;
+@navbarBackgroundImageWidth:						113px;
 
-@navbarInverseText:                      @grayLight;
-@navbarInverseLinkColor:                 @grayLight;
-@navbarInverseLinkColorHover:            @white;
-@navbarInverseLinkColorActive:           @navbarInverseLinkColorHover;
-@navbarInverseLinkBackgroundHover:       transparent;
-@navbarInverseLinkBackgroundActive:      @navbarInverseBackground;
+@navbarPyroText:                      	@white;
+@navbarPyroTextShadow:									@navbarPyroBackgroundHighlight;					
+@navbarPyroLinkColor:                 	@white;
+@navbarPyroLinkColorHover:            	@white;
+@navbarPyroLinkColorActive:           	@navbarPyroLinkColorHover;
+@navbarPyroLinkBackgroundHover:       	transparent;
+@navbarPyroLinkBackgroundActive:      	@navbarPyroBottomBorder;
 
-@navbarInverseSearchBackground:          lighten(@navbarInverseBackground, 25%);
-@navbarInverseSearchBackgroundFocus:     @white;
-@navbarInverseSearchBorder:              @navbarInverseBackground;
-@navbarInverseSearchPlaceholderColor:    #ccc;
+@navbarPyroSearchBackground:          	lighten(@navbarPyroBackground, 25%);
+@navbarPyroSearchBackgroundFocus:     	@white;
+@navbarPyroSearchBorder:              	@navbarPyroBackground;
+@navbarPyroSearchPlaceholderColor:    	#ccc;
 
-@navbarInverseBrandColor:                @navbarInverseLinkColor;
+@navbarPyroBrandColor:                	@navbarPyroLinkColor;
 
 
 // Pagination
