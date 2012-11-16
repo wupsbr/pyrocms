@@ -116,11 +116,11 @@
 					<h2>CSS3 Animations</h3>
 					<p>These keyframe animations perform beautifully across all devices. They are much more efficient than jQuery animations and can be easily added to any element with just a single class.</p> 
 				</div>
-				<div class="span12">
-					<div class="sandbox">
-						<div id="animateTest">
-							<span>Animate Me!</span>
-						</div>
+			</div>
+			<div class="content">
+				<div class="sandbox">
+					<div id="animateTest">
+						<span>Animate Me!</span>
 					</div>
 				</div>
 			</div>
@@ -249,7 +249,7 @@
 	}
 
 	$(function(){
-		$pos = $('.sandbox').offset().top - 0;
+		$pos = $('.content').offset().top - 0;
 
 		$(window).on('scroll', function(){
 			if($(window).scrollTop() >= $pos) {

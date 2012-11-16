@@ -7,18 +7,21 @@ html {
 }
 
 .content {
-	position: relative;
+	background: transparent;
+	margin-top: 0px;
+	height: 150px;
 }
 
 .sandbox {
-	padding: 24px 0;
+	padding: 60px 0 20px 0;
 	position: relative;
 	z-index: 1030;
 	pointer-events: none;
 	max-width: 200px;
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 0px;
+	background: transparent;
 }
 
 .fixed + h3 {
@@ -27,7 +30,7 @@ html {
 
 .fixed {
 	position: fixed !important;
-	top: 0;
+	top: 0px;
   left: 50%;
   margin-left: -100px;
 	display: inline-block;
