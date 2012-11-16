@@ -242,12 +242,13 @@
   padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
   color: @navbarLinkColor;
   text-decoration: none;
-  text-shadow: 0 1px 1px @navbarBackgroundHighlight;
+  text-shadow: 0 1px 1px @navbarTextShadow;
   font-size: @baseFontSize + 1;
   font-weight: 500;
 }
 .navbar .nav .dropdown-toggle .caret {
-  margin-top: 8px;
+  margin-top: 10px;
+  text-shadow: 0 1px 1px @navbarTextShadow;
 }
 
 // !Hover
@@ -394,10 +395,14 @@
   .brand,
   .nav > li > a {
     color: @navbarPyroLinkColor;
-    text-shadow: 0 1px 0 rgba(0,0,0,.25);
+    text-shadow: 0 1px 1px @navbarPyroTextShadow;
     &:hover {
       color: @navbarPyroLinkColorHover;
     }
+  }
+  
+  .navbar .nav .dropdown-toggle .caret {
+  	text-shadow: 0 1px 1px @navbarPyroTextShadow;
   }
 
   .nav > li > a:focus,

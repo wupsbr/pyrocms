@@ -6,6 +6,7 @@
 /* Remove background image */
 body {
   background-image: none;
+  background-color: white;
 }
 
 /* Space out subhead */

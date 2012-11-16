@@ -68,6 +68,7 @@ body > .navbar .brand:hover {
   color: #952f0a;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 1);
 }
+
 /* Sections
 -------------------------------------------------- */
 /* padding for in-page bookmarks and fixed navbar */
@@ -311,8 +312,8 @@ hr.soften {
 /* Footer
 -------------------------------------------------- */
 .footer {
-  padding: 70px 0;
-  margin-top: 70px;
+  padding: 50px 0;
+  margin-top: 50px;
 }
 .footer p {
   margin-bottom: 0;
@@ -324,6 +325,17 @@ hr.soften {
 .footer-links li {
   display: inline;
   margin-right: 10px;
+}
+.footer a {
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -ms-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+
+.footer a:hover, .footer a:focus {
+	color: white;
 }
 /* Special grid styles
 -------------------------------------------------- */
@@ -892,6 +904,7 @@ form.bs-docs-example {
   }
   .footer p {
     margin-bottom: 9px;
+    text-align: center;
   }
 }
 /* Landscape phones
@@ -955,7 +968,8 @@ form.bs-docs-example {
     left: auto;
   }
   /* Unfloat the back to top in footer to prevent odd text wrapping */
-  .footer .pull-right {
+  .footer .pull-right, .footer .pull-left {
     float: none;
+    text-align: center;
   }
 }

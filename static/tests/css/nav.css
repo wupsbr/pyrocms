@@ -1,107 +1,27 @@
-html {
-	-webkit-font-smoothing: antialiased;
+/* Tweak navbar brand link to be super sleek
+-------------------------------------------------- */
+body > .navbar {
+  font-size: 14px;
+  font-weight: 600;
 }
-
-body {
-	padding-top: 0px;
+/* Change the docs' brand */
+body > .navbar .brand {
+  padding-right: 0;
+  padding-left: 0;
+  margin-left: 20px;
+  float: right;
+  font-weight: bold;
+  color: #952f0a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 0.125);
+  -webkit-transition: all .2s linear;
+  -moz-transition: all .2s linear;
+  transition: all .2s linear;
 }
-
-.bs-docs-canvas {
-	margin-top: 40px;
-}
-
-.content {
-	position: relative;
-}
-
-.sandbox {
-	padding: 24px 0;
-	position: relative;
-	z-index: 1030;
-	pointer-events: none;
-	max-width: 200px;
-	text-align: center;
-	margin: 0 auto;
-	margin-top: 40px;
-}
-
-.fixed + h3 {
-	margin-top: 190px;
-}
-
-.fixed {
-	position: fixed !important;
-	top: 0;
-  left: 50%;
-  margin-left: -100px;
-	display: inline-block;
-	text-align: center;
-	
-}
-
-#animateTest {
-	text-align: center;
-	background: #333;
-	padding: 20px 0px;
-	width: 100%;
-	display: block;
-	color: #fff;
-	text-align: center;
-	border-radius: 5px;
-	font-weight: bold;
-	-webkit-box-shadow: 0 0 30px 0 rgba(0,0,0,.6);
-	-moz-box-shadow: 0 0 30px 0 rgba(0,0,0,.6);
-	-ms-box-shadow: 0 0 30px 0 rgba(0,0,0,.6);
-	-o-box-shadow: 0 0 30px 0 rgba(0,0,0,.6);
-	box-shadow: 0 0 30px 0 rgba(0,0,0,.6);
-	
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	-ms-backface-visibility: hidden;
-	-o-backface-visibility: hidden;
-	backface-visibility: hidden;
-	
-	-webkit-animation-duration: 1s;
-	-webkit-animation-delay: .2s;
-	-webkit-animation-timing-function: ease;
-	-webkit-animation-fill-mode: both;
-	-moz-animation-duration: 1s;
-	-moz-animation-delay: .2s;
-	-moz-animation-timing-function: ease;
-	-moz-animation-fill-mode: both;
-	-ms-animation-duration: 1s;
-	-ms-animation-delay: .2s;
-	-ms-animation-timing-function: ease;
-	-ms-animation-fill-mode: both;
-	-o-animation-duration: 1s;
-	-o-animation-delay: .2s;
-	-o-animation-timing-function: ease;
-	-o-animation-fill-mode: both;
-	animation-duration: 1s;
-	animation-delay: .2s;
-	animation-timing-function: ease;
-	animation-fill-mode: both;
-}
-
-#animateTest span {
-	margin: 0;
-}
-
-.fixed #animateTest {
-	width: 200px;
-}
-
-.btn {
-	font-weight: bold;
-	margin: .5em .25em;
-	display: inline-block;
-}
-
-@media (max-width: 767px) {
-	.jumbotron {
-    margin-top: 0px;
-  }
-
+body > .navbar .brand:hover {
+  text-decoration: none;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.4);
+  color: #952f0a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3), 0 0 30px rgba(255, 255, 255, 1);
 }
 
 /* Mobile Devices Landscape Specific
@@ -116,6 +36,7 @@ body {
 @media (max-width: 480px) {
 /* Styles */
 
+/*
 body > .navbar .brand {
 	padding-right: 0;
 	padding-left: 0;
@@ -123,17 +44,13 @@ body > .navbar .brand {
 	float: none;
 	text-align: center;
 }
+*/
 
 }
 
 /*:::PRIMARY:::*//* Portrait tablet to landscape and desktop 
 ------------------------------------------------------*/
 @media (min-width: 768px) and (max-width: 979px) {
-.jumbotron {
-    margin-top: 0px;
-  }
-
-}
 
 
 /* iPads (portrait and landscape) 
