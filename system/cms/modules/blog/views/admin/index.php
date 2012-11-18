@@ -1,4 +1,4 @@
-<div class="one_full">
+<div class="span12">
 	<section class="title">
 		<h4><?php echo lang('blog_posts_title'); ?></h4>
 	</section>

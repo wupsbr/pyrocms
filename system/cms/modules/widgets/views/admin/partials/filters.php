@@ -1,4 +1,4 @@
-<div class="one_full">
+<div class="span12">
 	
 	<section class="title">
 		<?php echo form_open(uri_string()); ?>

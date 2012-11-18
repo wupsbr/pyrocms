@@ -48,7 +48,7 @@
 			</li>
 		</ul>
 
-		<div class="buttons float-right padding-top">
+		<div class="buttons pull-right padding-top">
 			<?php $this->load->view('admin/partials/buttons', array('buttons' => array('save', 'cancel') )); ?>
 		</div>
 

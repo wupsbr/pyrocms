@@ -47,7 +47,7 @@
 			
 			<li>
 				<label for="intro"><?php echo lang('blog:intro_label'); ?></label>
-				<div class="one_full">
+				<div class="span12">
 					<?php echo form_textarea(array('id' => 'intro', 'name' => 'intro', 'value' => $post->intro, 'rows' => 5, 'class' => 'blog wysiwyg-simple')); ?>
 				</div>
 			</li>
@@ -65,7 +65,7 @@
 					), $post->type); ?>
 				</div>
 				
-				<div class="one_full">
+				<div class="span12">
 					<?php echo form_textarea(array('id' => 'body', 'name' => 'body', 'value' => $post->body, 'rows' => 30, 'class' => $post->type)); ?>
 				</div>
 			</li>

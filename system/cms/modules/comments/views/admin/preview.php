@@ -5,7 +5,7 @@
 		<strong><?php echo lang('comments:from_label');?>:</strong> <?php echo $comment->user_name;?>
 	</p>
 
-	<div class="float-right spacer-right buttons buttons-small">
+	<div class="pull-right spacer-right buttons buttons-small">
 		<?php if ($comment->is_active): ?>
 			<?php echo anchor('admin/comments/unapprove/'.$comment->id, lang('unapprove_label'), 'class="button"');?>
 		<?php else: ?>

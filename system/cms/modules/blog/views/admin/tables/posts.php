@@ -1,4 +1,4 @@
-	<table cellspacing="0">
+	<table class="table-striped" cellspacing="0">
 		<thead>
 			<tr>
 				<th width="20"><?php echo form_checkbox(array('name' => 'action_to_all', 'class' => 'check-all')); ?></th>
