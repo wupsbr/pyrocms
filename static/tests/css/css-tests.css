@@ -57,7 +57,7 @@ body {
   margin-bottom: 45px;
 }
 .fluid-grid .row {
-  height: 40px;
+  /* height: 40px; */
   padding-top: 10px;
   margin-top: 10px;
   color: #ddd;
