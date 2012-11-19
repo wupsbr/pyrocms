@@ -9166,6 +9166,7 @@ body.menu-open a.plus {
   margin-bottom: 12px;
   font-size: 15px;
   font-weight: 600;
+  vertical-align: middle;
   color: #ffffff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
   line-height: 32px;
@@ -9177,13 +9178,17 @@ body.menu-open a.plus {
   color: #ffffff;
   text-decoration: none;
   font-weight: 400;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
 }
 .subbar h2 a:hover {
   color: #ff9a00;
 }
 .subbar small {
-  margin-top: 17px;
   display: inline-block;
+  vertical-align: middle;
   text-align: left;
   color: #999999;
   font-weight: 400;
@@ -9191,10 +9196,11 @@ body.menu-open a.plus {
 }
 .subbar .divider-vertical {
   display: inline-block;
-  margin: 0 2px;
+  margin: 0 5px;
   width: 0px;
-  height: 54px;
-  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  height: 24px;
+  vertical-align: middle;
+  border-left: 1px solid rgba(255, 255, 255, 0.05);
   border-right: 1px solid #000000;
   color: #000000;
 }
@@ -9202,7 +9208,6 @@ body.menu-open a.plus {
 /* !Shortcuts */
 nav#shortcuts {
   margin-top: 10px;
-  margin-right: 17px;
   float: right;
 }
 /*

@@ -81,7 +81,7 @@ class Module_Users extends Module {
 									'create' => array(
 										'name' 	=> 'user_add_title',
 										'uri' 	=> 'admin/users/create',
-										'class' => 'add'
+										'class' => 'btn btn-inverse add'
 										)
 									)
 								),
@@ -92,7 +92,7 @@ class Module_Users extends Module {
 									'create' => array(
 										'name' 	=> 'user_add_field',
 										'uri' 	=> 'admin/users/fields/create',
-										'class' => 'add'
+										'class' => 'btn btn-inverse add'
 										)
 									)
 								)

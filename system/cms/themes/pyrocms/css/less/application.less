@@ -657,6 +657,7 @@ body.menu-open a.plus {
 	margin-bottom:12px;
 	font-size:@baseFontSize + 1;
 	font-weight: 600;
+	vertical-align:middle;
 	color: @subbarPyroTitle;
 	text-shadow: 0 1px 0 rgba(0,0,0,.8);
 	line-height:@baseLineHeight + 12;
@@ -669,6 +670,7 @@ body.menu-open a.plus {
 	color: @subbarPyroTitle;
 	text-decoration: none;
 	font-weight:400;
+	.transition(all 200ms linear);
 }
 
 .subbar h2 a:hover {
@@ -676,9 +678,9 @@ body.menu-open a.plus {
 }
 
 .subbar small {
-	margin-top:17px;
 	//float:left;
 	display: inline-block;
+	vertical-align:middle;
 	text-align: left;
 	color:@subbarPyroText;
 	font-weight:400;
@@ -687,9 +689,10 @@ body.menu-open a.plus {
 
 .subbar .divider-vertical{
 	display: inline-block;
-	margin: 0 2px;
+	margin: 0 5px;
 	width: 0px;
-	height: 54px;
+	height: 24px;
+	vertical-align:middle;
 	border-left: 1px solid @subbarPyroTextHighlight;
 	border-right: 1px solid @subbarPyroTextShadow;
 	color: @subbarPyroTitleBreak;
@@ -700,7 +703,7 @@ body.menu-open a.plus {
 /* !Shortcuts */
 nav#shortcuts {
 	margin-top:10px;
-	margin-right:17px;
+	//margin-right:17px;
 	float:right;
 }
 

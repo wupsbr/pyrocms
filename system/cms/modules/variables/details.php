@@ -71,7 +71,7 @@ class Module_Variables extends Module {
 				array(
 				    'name' => 'variables.create_title',
 				    'uri' => 'admin/variables/create',
-					'class' => 'add',
+					'class' => 'btn btn-inverse add',
 				),
 		    ),
 		);

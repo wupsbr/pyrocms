@@ -74,7 +74,7 @@ class Module_Blog extends Module {
 						array(
 					 	   'name' => 'blog:create_title',
 						    'uri' => 'admin/blog/create',
-						    'class' => 'btn add',
+						    'class' => 'btn btn-inverse add',
 						),
 					),
 				),

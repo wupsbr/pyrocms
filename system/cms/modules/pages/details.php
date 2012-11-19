@@ -80,7 +80,7 @@ class Module_Pages extends Module
 						array(
 						    'name' => 'pages:create_title',
 						    'uri' => 'admin/pages/create',
-						    'class' => 'add'
+						    'class' => 'btn btn-inverse add'
 						),
 				    ),
 				),
@@ -91,7 +91,7 @@ class Module_Pages extends Module
 						array(
 						    'name' => 'pages:layouts_create_title',
 						    'uri' => 'admin/pages/layouts/create',
-						    'class' => 'add'
+						    'class' => 'btn btn-inverse add'
 						),
 				    ),
 			    ),
