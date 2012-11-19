@@ -36,6 +36,7 @@
 @pyroOrange:            #ff9a00;
 @pyroHighlight:					#ffd253;
 @pyroShadow:						#952f0a;
+@pyroBlack:							#292929;
 
 // Scaffolding
 // -------------------------
@@ -205,13 +206,13 @@
 
 @navbarText:                      @white;
 @navbarTextShadow:                @navbarBackgroundHighlight;
+@navbarTextHighlight:							@navbarBackgroundHighlight;
 @navbarLinkColor:                 @white;
 @navbarLinkColorHover:            @white;
 @navbarLinkColorActive:           @white;
 @navbarLinkBackgroundHover:       transparent;
 @navbarLinkBackgroundActive:      darken(@navbarBackground, 5%);
-
-@navbarBrandColor:                @navbarLinkColor;
+@navbarBrand:                			@navbarLinkColor;
 
 // Pyro navbar
 @navbarPyroBackground:                	#E64D20;
@@ -225,12 +226,14 @@
 @navbarBackgroundImageWidth:						113px;
 
 @navbarPyroText:                      	@white;
-@navbarPyroTextShadow:									@pyroShadow;					
+@navbarPyroTextShadow:									@pyroShadow;
+@navbarPyroTextHighlight:								#ff9920;
 @navbarPyroLinkColor:                 	@white;
 @navbarPyroLinkColorHover:            	@white;
 @navbarPyroLinkColorActive:           	@navbarPyroLinkColorHover;
 @navbarPyroLinkBackgroundHover:       	transparent;
 @navbarPyroLinkBackgroundActive:      	@navbarPyroBottomBorder;
+@navbarPyroBrand:												@pyroShadow;
 
 @navbarPyroSearchBackground:          	lighten(@navbarPyroBackground, 25%);
 @navbarPyroSearchBackgroundFocus:     	@white;
@@ -239,6 +242,19 @@
 
 @navbarPyroBrandColor:                	@navbarPyroLinkColor;
 
+//Subbar
+// -------------------------
+@subbarPyroBackground:									@pyroBlack;
+@subbarPyroBorder:											@black;
+
+@subbarPyroTitle:												@white;
+@subbarPyroTitleBreak:									@black;
+@subbarPyroText:												@grayLight;
+@subbarPyroTextShadow:									@black;
+@subbarPyroTextHighlight:								rgba(255,255,255,.2);
+
+@subbarPyroLink:												@subbarPyroTitle;
+@subbarPyroLinkHover:										@pyroOrange;
 
 // Pagination
 // -------------------------

@@ -200,7 +200,7 @@ footer {
   border-top: 1px solid #000000;
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color: #333333;
+  background-color: #292929;
 }
 a {
   color: #ff9a00;
@@ -6050,8 +6050,8 @@ input[type="submit"].btn.btn-mini {
   display: block;
   padding: 12.5px 20px 12.5px;
   margin-left: -20px;
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 15px;
+  font-weight: 600;
   color: #ffffff;
   text-shadow: 0 1px 0 #fc872a;
 }
@@ -6405,12 +6405,22 @@ input[type="submit"].btn.btn-mini {
   border-top: 1px solid #ffd253;
   border-bottom: 1px solid #952f0a;
 }
-.navbar-pyro .brand,
+.navbar-pyro .brand {
+  color: #952f0a;
+  text-shadow: 0 1px 0 #ff9920, 0 0 30px rgba(255, 255, 255, 0.125);
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+.navbar-pyro .brand:hover {
+  color: #952f0a;
+  text-shadow: 0 1px 0 #ff9920, 0 0 30px #ffffff;
+}
 .navbar-pyro .nav > li > a {
   color: #ffffff;
   text-shadow: 0 1px 1px #952f0a;
 }
-.navbar-pyro .brand:hover,
 .navbar-pyro .nav > li > a:hover {
   color: #ffffff;
 }
@@ -9147,32 +9157,25 @@ body.menu-open a.plus {
 /* !Subbar */
 .subbar {
   width: 100%;
-  background: #fff;
-  /*
-background: #dddddd;
-	background-image: -moz-linear-gradient(top, #dddddd, #cccccc);
-	background-image: -ms-linear-gradient(top, #dddddd, #cccccc);
-	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#dddddd), to(#cccccc));
-	background-image: -webkit-linear-gradient(top, #dddddd, #cccccc);
-	background-image: -o-linear-gradient(top, #dddddd, #cccccc);
-	background-image: linear-gradient(top, #dddddd, #cccccc);
-	background-repeat: repeat-x;
-*/
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#dddddd', endColorstr='#cccccc', GradientType=0);
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ccc;
+  background: #292929;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
 }
 .subbar h2 {
   margin-top: 10px;
   margin-bottom: 12px;
-  font-size: 19px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #ffffff;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.8);
   line-height: 32px;
-  float: left;
+  display: inline-block;
+  text-align: left;
 }
 .subbar h2,
 .subbar h2 a {
-  color: #777;
+  color: #ffffff;
+  text-decoration: none;
   font-weight: 400;
 }
 .subbar h2 a:hover {
@@ -9180,10 +9183,20 @@ background: #dddddd;
 }
 .subbar small {
   margin-top: 17px;
-  float: left;
-  color: #999;
-  font-weight: 600;
+  display: inline-block;
+  text-align: left;
+  color: #999999;
+  font-weight: 400;
   font-size: 12px;
+}
+.subbar .divider-vertical {
+  display: inline-block;
+  margin: 0 2px;
+  width: 0px;
+  height: 54px;
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  border-right: 1px solid #000000;
+  color: #000000;
 }
 /* !end Subbar */
 /* !Shortcuts */
@@ -9255,6 +9268,10 @@ nav#shortcuts ul li a:hover
 }
 /* !end Sections bar */
 /* !Content */
+#content {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
 #content-body {
   width: 100%;
   height: 100%;
@@ -9276,14 +9293,14 @@ nav#shortcuts ul li a:hover
   text-shadow: 0 2px 1px #ffffff;
   font-weight: 400;
   position: relative;
-  text-indent: 30px;
+  text-indent: 20px;
 }
 .title h4 i:before {
   color: #999999;
   position: absolute;
   text-shadow: 0 2px 1px #ffffff;
   top: -4px;
-  left: -30px;
+  left: -34px;
 }
 .title h4 .button {
   margin-top: -5px;
@@ -9458,7 +9475,7 @@ footer #pyroinfo {
 }
 footer p {
   color: #999999;
-  font-size: 14px;
+  font-size: 12px;
   text-align: left;
 }
 /* !end Footer */
