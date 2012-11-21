@@ -1,5 +1,5 @@
 <section class="title">
-	<h4><?php echo lang('addons:themes'); ?></h4>
+	<h4 class="pyrocon-sampler"><?php echo lang('addons:themes'); ?></h4>
 </section>
 
 <section class="item">

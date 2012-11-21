@@ -137,14 +137,14 @@
 .navbar-search {
   position: relative;
   float: left;
-  .navbarVerticalAlign(30px); // Vertically center in navbar
+  .navbarVerticalAlign(26px); // Vertically center in navbar
   margin-bottom: 0;
   .search-query {
     margin-bottom: 0;
-    padding: 4px 14px;
-    #font > .sans-serif(13px, normal, 1);
+    padding: 2px 14px;
+    #font > .sans-serif(13px, normal, 15px);
     .border-radius(15px); // redeclare because of specificity of the type attribute
-  }
+	}
 }
 
 
@@ -240,16 +240,49 @@
 .navbar .nav > li > a {
   float: none;
   // Vertically center the text given @navbarHeight
-  padding: ((@navbarHeight - @baseLineHeight) / 2) 15px ((@navbarHeight - @baseLineHeight) / 2);
+  padding: ((@navbarHeight - @baseLineHeight) / 2) 14px ((@navbarHeight - @baseLineHeight) / 2);
   color: @navbarLinkColor;
   text-decoration: none;
   text-shadow: 0 1px 1px @navbarTextShadow;
-  font-size: @baseFontSize + 1;
+  font-size: @baseFontSize;
   font-weight: 500;
+  vertical-align: middle;
+  display: inline-block;
 }
 .navbar .nav .dropdown-toggle .caret {
   margin-top: 10px;
   text-shadow: 0 1px 1px @navbarTextShadow;
+}
+
+// !Menu carets
+.navbar .nav > li.dropdown > a {
+  &:after {
+    content: '\e114';
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-size: @baseFontSize - 5;
+    line-height: @baseLineHeight - 19;
+    color: @navbarBrand;
+    text-shadow: 0 1px 0 @navbarTextHighlight, 0 0 15px rgba(255, 255, 255, 0.125);
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    padding-left: 2px;
+  }
+}
+
+// !Open dropdown nav items
+.navbar .nav > li.dropdown.open > a,
+.navbar .nav > li.dropdown.open > a:hover,
+.navbar .nav > li.dropdown.open > a:focus {
+  color: @navbarPyroLinkColorActive;
+  text-decoration: none;
+  background-color: @navbarLinkBackgroundActive;
+  &:after {
+  content: '\e113';
+  //color: @white;
+  //text-shadow: 0 0px 0 @navbarTextHighlight, 0 0 15px rgba(255, 255, 255, 0.125);
+  }
 }
 
 // !Hover
@@ -298,6 +331,23 @@
 // !Dropdown menus
 // --------------
 
+// !Menu position and menu caret support for dropups via extra dropup class
+.navbar-fixed-bottom .nav > li > .dropdown-menu {
+  &:before {
+    border-top: 7px solid #ccc;
+    border-top-color: @dropdownBorder;
+    border-bottom: 0;
+    bottom: -7px;
+    top: auto;
+  }
+  &:after {
+    border-top: 6px solid @dropdownBackground;
+    border-bottom: 0;
+    bottom: -6px;
+    top: auto;
+  }
+}
+
 // !Menu position and menu carets
 .navbar .nav > li > .dropdown-menu {
   &:before {
@@ -345,6 +395,7 @@
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: @navbarLinkBackgroundActive;
   color: @navbarLinkColorActive;
+  .box-shadow(inset 0 1px 2px 0 rgba(0,0,0,.5));
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColor;
@@ -395,24 +446,73 @@
   
   .brand {
 	  color: @navbarPyroBrand;
-    text-shadow: 0 1px 0 @navbarPyroTextHighlight, 0 0 30px rgba(255, 255, 255, 0.125);
+    text-shadow: 0 1px 0 @navbarPyroTextHighlight, 0 0 15px rgba(255,255,255,.125);
     .transition(all 200ms linear);
     &:hover {
-    	color: @navbarPyroBrand;
-    	text-shadow:0 1px 0 @navbarPyroTextHighlight, 0 0 30px rgba(255, 255, 255, 1);
+    	color: darken(@navbarPyroBrand, 2%);
+    	text-shadow:0 1px 0 lighten(@navbarPyroTextHighlight, 2%), 0 0 22px rgba(255,255,255,1);
     }
   }
   
   .nav > li > a {
     color: @navbarPyroLinkColor;
-    text-shadow: 0 1px 1px @navbarPyroTextShadow;
+    text-shadow: 0 1px 2px @navbarPyroTextShadow;
+    .transition(all 200ms linear);
     &:hover {
       color: @navbarPyroLinkColorHover;
+      text-shadow:0 1px 2px @navbarPyroTextShadow;
     }
   }
   
-  .navbar .nav .dropdown-toggle .caret {
-  	text-shadow: 0 1px 1px @navbarPyroTextShadow;
+  // !Menu carets
+	.nav > li.dropdown > a {
+	  &:after {
+	    content: '\e114';
+	    font-family: 'Glyphicons Halflings';
+	    font-style: normal;
+	    font-size: @baseFontSize - 5;
+	    color: @navbarPyroBrand;
+	    text-shadow: 0 1px 0px @navbarPyroTextHighlight, 0 0 15px rgba(255, 255, 255, 0.125);
+	    display: inline-block;
+	    vertical-align: middle;
+	    position: relative;
+	    padding-left: 2px;
+	  }
+	}
+	
+	// !Open dropdown nav items
+	.nav > li.dropdown.open > a,
+	.nav > li.dropdown.open > a:hover,
+	.nav > li.dropdown.open > a:focus {
+	  color: @navbarPyroLinkColorActive;
+	  text-decoration: none;
+	  background-color: @navbarPyroLinkBackgroundActive;
+	  &:after {
+	  content: '\e113';
+	  //color: @white;
+	  //text-shadow: 0 0px 0 @navbarPyroTextHighlight, 0 0 15px rgba(255, 255, 255, 0.125);
+	  }
+	}
+	
+	// !Hover
+	.nav > li > a:hover {
+	  background-color: @navbarLinkBackgroundHover; // "transparent" is default to differentiate :hover from .active
+	  color: @navbarLinkColorHover;
+	  text-decoration: none;
+	}
+	
+	
+	// !Active nav items
+	.nav > .active > a,
+	.nav > .active > a:hover,
+	.nav > .active > a:focus {
+	  color: @navbarPyroLinkColorActive;
+	  text-decoration: none;
+	  background-color: @navbarPyroLinkBackgroundActive;
+	}
+
+  .nav .dropdown-toggle .caret {
+  	text-shadow: 0 1px 2px @navbarPyroTextShadow;
   }
 
   .nav > li > a:focus,
@@ -448,6 +548,7 @@
   .nav li.dropdown.open.active > .dropdown-toggle {
     background-color: @navbarPyroLinkBackgroundActive;
     color: @navbarPyroLinkColorActive;
+    .box-shadow(inset 0 -1px 2px 0px rgba(149, 47, 10, 0.5), 1px 0 0px 0px rgba(255,210,83,.1), -1px 0 0px 0px rgba(255,210,83,.1));
   }
   .nav li.dropdown > .dropdown-toggle .caret {
     border-top-color: @navbarPyroLinkColor;
@@ -466,20 +567,25 @@
       color: @white;
       background-color: @navbarPyroSearchBackground;
       border-color: @navbarPyroSearchBorder;
+      width: 100px;
       .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)");
-      .transition(none);
+      .transition(all 200ms linear);
       .placeholder(@navbarPyroSearchPlaceholderColor);
 
       // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
       &:focus,
       &.focused {
-        padding: 5px 15px;
+        padding: 2px 14px;
         color: @grayDark;
-        text-shadow: 0 1px 0 @white;
+        //text-shadow: 0 1px 0 @white;
         background-color: @navbarPyroSearchBackgroundFocus;
-        border: 0;
+        //border: 0;
         .box-shadow(0 0 3px rgba(0,0,0,.15));
         outline: 0;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+	      width: 206px;
       }
     }
   }

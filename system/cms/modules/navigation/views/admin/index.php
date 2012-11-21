@@ -6,12 +6,12 @@
 				<ul>
 					<li>
 						<h4 class="tooltip" title="<?php echo lang('nav_abbrev_label').': '.$group->abbrev; ?>"><?php echo $group->title;?></h4>
-						<?php echo anchor('admin/navigation/create/'.$group->id, lang('nav_link_create_title'), 'rel="'.$group->id.'" class="add ajax button"') ?>
+						<?php echo anchor('admin/navigation/create/'.$group->id, lang('nav_link_create_title'), 'rel="'.$group->id.'" class="btn ajax button"') ?>
 					</li>
 					
 					<li>
 						<h4 class="form-title group-title-<?php echo $group->id; ?>"></h4>
-						<?php echo anchor('admin/navigation/groups/delete/'.$group->id, lang('global:delete'), array('class' => 'tooltip-e confirm button',  'title' => lang('nav_group_delete_confirm'))) ?>
+						<?php echo anchor('admin/navigation/groups/delete/'.$group->id, lang('global:delete'), array('class' => 'tooltip-e btn-confirm',  'title' => lang('nav_group_delete_confirm'))) ?>
 					</li>
 				</ul>
 			

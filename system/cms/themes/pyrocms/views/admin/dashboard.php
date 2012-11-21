@@ -73,7 +73,7 @@
 			</script>
 
 			<section class="title">
-				<h4><i class="pyrocon-pie_chart"></i>Analytics</h4>
+				<h4 class="pyrocon-pie_chart">Analytics</h4>
 			</section>
 	
 			<div class="item" id="analyticsWrapper">
@@ -92,7 +92,7 @@
 	<?php if (isset($recent_comments) and is_array($recent_comments) and $theme_options->pyrocms_recent_comments == 'yes') : ?>
 		<div id="existing-comments" class="span6">
 			<section class="title">
-				<h4><i class="pyrocon-comments"></i> <?php echo lang('comments:recent_comments') ?></h4>
+				<h4 class="pyrocon-comments"> <?php echo lang('comments:recent_comments') ?></h4>
 			</section>
 
 			<section class="item">
@@ -123,7 +123,7 @@
 	<?php if ($theme_options->pyrocms_quick_links == 'yes') : ?>
 		<div id="quick_links" class="span6">
 			<section class="title <?php echo isset($rss_items); ?>">
-				<h4><i class="pyrocon-link"></i> <?php echo lang('cp_admin_quick_links') ?></h4>
+				<h4 class="pyrocon-link"> <?php echo lang('cp_admin_quick_links') ?></h4>
 			</section>
 
 			<section class="item">

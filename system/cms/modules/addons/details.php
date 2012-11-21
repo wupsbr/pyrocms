@@ -87,7 +87,8 @@ class Module_Addons extends Module
 					// @TODO
 					'name' => 'global:upload',
 					'uri' => 'admin/addons/modules/upload',
-					'class' => 'add modal',
+					'class' => 'btn btn-inverse',
+					'data-toggle' => 'modal',
 				),
 			);
 

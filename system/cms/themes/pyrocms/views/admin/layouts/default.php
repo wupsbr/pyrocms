@@ -85,6 +85,7 @@
 			<![endif]-->
 		</div><!-- !end page -->
 	</div><!-- !end viewport -->
+	<div id="ajax-modal" class="modal hide fade" tabindex="-1"></div>
 
 </body>
 </html>

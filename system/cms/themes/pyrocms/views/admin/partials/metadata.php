@@ -10,13 +10,14 @@ Asset::js('jquery/jquery.cooki.js');
 //Asset::js('bootstrap/bootstrap-carousel.js');
 //Asset::js('bootstrap/bootstrap-collapse.js');
 //Asset::js('bootstrap/bootstrap-dropdown.js');
-//Asset::js('bootstrap/bootstrap-modal.js');
 //Asset::js('bootstrap/bootstrap-popover.js');
 //Asset::js('bootstrap/bootstrap-scrollspy.js');
 //Asset::js('bootstrap/bootstrap-tab.js');
 //Asset::js('bootstrap/bootstrap-tooltip.js');
 //Asset::js('bootstrap/bootstrap-transition.js');
 //Asset::js('bootstrap/bootstrap-typeahead.js');
+//Asset::js('bootstrap/bootstrap-modalmanager.js');
+//Asset::js('bootstrap/bootstrap-modal.js');
 
 Asset::js(array('codemirror/codemirror.js',
 	'codemirror/mode/css/css.js',
@@ -60,8 +61,10 @@ Asset::js(array('codemirror/codemirror.js',
 <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
 <![endif]-->
 
+<!--
 <?php if ($module_details['sections']): ?>
 <style>section#content {margin-top: 170px!important;}</style>
 <?php endif; ?>
+-->
 
 <?php echo $template['metadata']; ?>

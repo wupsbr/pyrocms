@@ -749,11 +749,35 @@ form.bs-docs-example {
   padding: 8px 14px;
   border: 1px solid #e5e5e5;
 }
+
+.bs-docs-sidenav > li > a:after {
+	content: "\e080";
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  line-height: 1;
+  color: #C0C0C0;
+  margin-top: 2px;
+  float: right;
+}
+
+.bs-docs-sidenav > li > a:hover:after {
+	color: #777;
+}
+
+.bs-docs-sidenav > li.active > a:after {
+	color: white;
+}
+
+.bs-docs-sidenav > li.active > a:hover:after {
+	color: white;
+}
+
 .bs-docs-sidenav > li:first-child > a {
   -webkit-border-radius: 6px 6px 0 0;
   -moz-border-radius: 6px 6px 0 0;
   border-radius: 6px 6px 0 0;
 }
+
 .bs-docs-sidenav > li:last-child > a {
   -webkit-border-radius: 0 0 6px 6px;
   -moz-border-radius: 0 0 6px 6px;

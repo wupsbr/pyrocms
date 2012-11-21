@@ -74,6 +74,7 @@ class Module_Widgets extends Module {
 						array(
 						    'name' => 'widgets.add_area',
 						    'uri' => 'admin/widgets/areas/create',
+						    'class' => 'btn btn-inverse',
 						),
 				    ),
 			    ),

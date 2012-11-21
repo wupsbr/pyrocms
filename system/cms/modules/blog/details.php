@@ -74,7 +74,7 @@ class Module_Blog extends Module {
 						array(
 					 	   'name' => 'blog:create_title',
 						    'uri' => 'admin/blog/create',
-						    'class' => 'btn btn-inverse add',
+						    'class' => 'btn btn-inverse',
 						),
 					),
 				),
@@ -85,7 +85,7 @@ class Module_Blog extends Module {
 						array(
 						    'name' => 'cat_create_title',
 						    'uri' => 'admin/blog/categories/create',
-						    'class' => 'btn btn-pyro add',
+						    'class' => 'btn btn-inverse',
 						),
 				    ),
 			    ),

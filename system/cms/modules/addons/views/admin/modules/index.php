@@ -1,5 +1,5 @@
 <section class="title">
-	<h4><?php echo lang('addons:modules');?></h4>
+	<h4 class="pyrocon-cogwheels"><?php echo lang('addons:modules');?></h4>
 </section>
 
 <section class="item">

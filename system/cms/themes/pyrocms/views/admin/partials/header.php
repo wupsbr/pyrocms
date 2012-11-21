@@ -17,23 +17,16 @@
 					<nav>
 						<?php file_partial('navigation'); ?>
 					</nav>
+					<form class="navbar-search pull-right">
+						<input type="text" class="search-query" placeholder="Search">
+					</form>
 				</div><!--/.nav-collapse -->
 			</div>
 		</div>
 	</div>
 	<div class="subbar">
-		<div class="container">
-			<h2><?php echo $module_details['name'] ? anchor('admin/'.$module_details['slug'], $module_details['name']) : lang('global:dashboard'); ?></h2>
-			
-			<?php if ( $this->uri->segment(2) ) { echo '<span class="divider-vertical"></span>'; } ?>
-			<small class="">
-				<?php echo $module_details['description'] ? $module_details['description'] : ''; ?>
-			</small>
-	
-			<?php file_partial('shortcuts'); ?>
-	
-		</div>
+		<?php file_partial('subbar'); ?>
 	</div>
 	
-	<?php if ( ! empty($module_details['sections'])) file_partial('sections'); ?>
+	<!-- <?php if ( ! empty($module_details['sections'])) file_partial('sections'); ?> -->
 </header>

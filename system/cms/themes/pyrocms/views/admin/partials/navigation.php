@@ -117,7 +117,7 @@
 				
 				<?php if($module_details['slug']): ?>
 					<li id="help-link">
-						<?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?>
+						<?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'pyro_modal')); ?>
 					</li>
 				<?php endif; ?>
 			</ul>

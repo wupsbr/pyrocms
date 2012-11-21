@@ -56,7 +56,7 @@ class Module_Keywords extends Module {
 				array(
 			 	   'name' => 'keywords:add_title',
 				   'uri' => 'admin/keywords/add',
-				   'class' => 'btn btn-inverse add',
+				   'class' => 'btn btn-inverse',
 				),
 			),
 		);
