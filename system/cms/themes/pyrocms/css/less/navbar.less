@@ -27,7 +27,8 @@
   border: 1px solid @navbarBorder;
   .border-radius(@baseBorderRadius);
   .box-shadow(0 1px 4px rgba(0,0,0,.065));
-  //-webkit-font-smoothing: subpixel-antialiased;
+  //.backface-visibility(hidden);
+   //-webkit-font-smoothing: subpixel-antialiased;
 
   // Prevent floats from breaking the navbar
   .clearfix();
@@ -300,7 +301,7 @@
   color: @navbarLinkColorActive;
   text-decoration: none;
   background-color: @navbarLinkBackgroundActive;
-  .box-shadow(inset 0 3px 8px rgba(0,0,0,.125));
+  .box-shadow(inset 0 -1px 2px 0px rgba(149, 47, 10, 0.5), 1px 0 0px 0px rgba(255,210,83,.1), -1px 0 0px 0px rgba(255,210,83,.1));
 }
 
 // !Navbar button for toggling navbar items in responsive layouts
@@ -395,7 +396,7 @@
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: @navbarLinkBackgroundActive;
   color: @navbarLinkColorActive;
-  .box-shadow(inset 0 1px 2px 0 rgba(0,0,0,.5));
+  .box-shadow(inset 0 -1px 2px 0px rgba(149, 47, 10, 0.5), 1px 0 0px 0px rgba(255,210,83,.1), -1px 0 0px 0px rgba(255,210,83,.1));
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: @navbarLinkColor;
@@ -442,6 +443,8 @@
     border-color: @navbarPyroBorder;
     border-top: 1px solid @navbarPyroTopBorder;
     border-bottom: 1px solid @navbarPyroBottomBorder;
+    //.backface-visibility(hidden);
+    //-webkit-font-smoothing: subpixel-antialiased;
   }
   
   .brand {
@@ -501,14 +504,17 @@
 	  text-decoration: none;
 	}
 	
-	
 	// !Active nav items
 	.nav > .active > a,
 	.nav > .active > a:hover,
-	.nav > .active > a:focus {
+	.nav > .active > a:focus,
+	.nav > li > a.current,
+	.nav > li > a.current:hover,
+	.nav > li > a.current:focus, {
 	  color: @navbarPyroLinkColorActive;
 	  text-decoration: none;
 	  background-color: @navbarPyroLinkBackgroundActive;
+	  .box-shadow(inset 0 -1px 2px 0px rgba(149, 47, 10, 0.5), 1px 0 0px 0px rgba(255,210,83,.1), -1px 0 0px 0px rgba(255,210,83,.1));
 	}
 
   .nav .dropdown-toggle .caret {
@@ -568,8 +574,11 @@
       background-color: @navbarPyroSearchBackground;
       border-color: @navbarPyroSearchBorder;
       width: 100px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      .transition(width 200ms ease 0s);
       .box-shadow(~"inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0 rgba(255,255,255,.15)");
-      .transition(all 200ms linear);
       .placeholder(@navbarPyroSearchPlaceholderColor);
 
       // Focus states (we use .focused since IE7-8 and down doesn't support :focus)
@@ -583,8 +592,6 @@
         .box-shadow(0 0 3px rgba(0,0,0,.15));
         outline: 0;
         position: absolute;
-        top: 0px;
-        right: 0px;
 	      width: 206px;
       }
     }
