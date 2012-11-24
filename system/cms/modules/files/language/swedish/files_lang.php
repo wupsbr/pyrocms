@@ -1,10 +1,10 @@
 <?php defined('BASEPATH') or exit('No direct script access allowed');
 
- /**
+/**
  * Swedish translation.
  *
  * @author		marcus@incore.se
- * @package		PyroCMS  
+ * @package		PyroCMS
  * @link		http://pyrocms.com
  * @date		2012-10-22
  * @version		1.1.0
@@ -35,6 +35,7 @@ $lang['files:added'] = 'Tillagd';
 $lang['files:width'] = 'Bredd';
 $lang['files:height'] = 'Höjd';
 $lang['files:ratio'] = 'Förhållande';
+$lang['files:alt_attribute'] = 'alt Attribute'; #translate
 $lang['files:full_size'] = 'Originalstorlek';
 $lang['files:filename'] = 'Filnamn';
 $lang['files:filesize'] = 'Filstorlek';
@@ -87,6 +88,7 @@ $lang['files:no_records_found'] = 'Ingen poster hittades';
 $lang['files:invalid_extension'] = '"%s" har ett filtillägg som inte är tillåtet.';
 $lang['files:upload_error'] = 'Uppladdningen misslyckades';
 $lang['files:description_saved'] = 'Filenbeskrivningen har sparats';
+$lang['files:alt_saved'] = 'The image alt attribute has been saved'; #translate
 $lang['files:file_moved'] = '"%s" har fyttats';
 $lang['files:exceeds_server_setting'] = 'Servern kan inte hantea filstorleken';
 $lang['files:exceeds_allowed'] = 'Filen är för stor';
@@ -98,5 +100,5 @@ $lang['files:type_i'] = 'Bild';
 $lang['files:type_o'] = 'Annat';
 
 
-/* End of file files_lang.php */  
+/* End of file files_lang.php */
 /* Location: system/cms/modules/files/language/swedish/files_lang.php */  
