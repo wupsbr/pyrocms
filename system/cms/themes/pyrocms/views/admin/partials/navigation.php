@@ -1,4 +1,4 @@
-<ul class="primary-nav">
+<ul class="nav">
 	
 	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), (!$this->module > '' ? 'current' : '').'"');?></li>
 
@@ -12,7 +12,7 @@
 		{
 			if (is_array($menu_item) and count($menu_item) > 1)
 			{
-				echo '<li><a href="'.current_url().'#" class="top-link">'.lang_label($key).'</a><ul>';
+				echo '<li class="dropdown"><a href="'.current_url().'#" class="dropdown-toggle top-link" data-toggle="dropdown">'.lang_label($key).'</a><ul class="dropdown-menu">';
 
 				foreach ($menu_item as $lang_key => $uri)
 				{
