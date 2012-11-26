@@ -6,7 +6,7 @@
 		if(isset($button_type) && $button_type == 'primary'):
 			$btn_class = 'btn';
 		elseif(isset($button_type) && $button_type == 'secondary'):
-			$btn_class = 'button';
+			$btn_class = 'btn';
 		else:
 			// Default to primary
 			$btn_class = 'btn';

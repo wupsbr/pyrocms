@@ -50,7 +50,7 @@
 
 	<p><?php echo lang('addons:modules:core_introduction'); ?></p>
 
-	<table class="table-list" cellspacing="0">
+	<table class="table table-striped" cellspacing="0">
 		<thead>
 			<tr>
 				<th><?php echo lang('name_label');?></th>

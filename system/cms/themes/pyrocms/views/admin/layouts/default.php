@@ -47,9 +47,9 @@
 				<section id="content">
 					<div class="container">
 						<div id="content-body">
+							<?php file_partial('notices'); ?>
 							<div class="row-fluid">
-								<?php file_partial('notices'); ?>
-								<?php echo $template['body']; ?>
+									<?php echo $template['body']; ?>
 							</div>
 						</div>
 					</div>

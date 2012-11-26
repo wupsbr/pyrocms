@@ -8,8 +8,9 @@
 
 		<?php echo form_open('admin/blog/categories/delete'); ?>
 
-		<table border="0" class="table-list" cellspacing="0">
+		<table border="0" class="table table-striped" cellspacing="0">
 			<thead>
+			<?php echo lang('cat_category_label'); ?>
 			<tr>
 				<th width="20"><?php echo form_checkbox(array('name' => 'action_to_all', 'class' => 'check-all')); ?></th>
 				<th><?php echo lang('cat_category_label'); ?></th>
