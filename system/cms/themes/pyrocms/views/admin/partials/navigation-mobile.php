@@ -1,4 +1,4 @@
-<ul>
+<ul class="nav">
 	
 	<li id="dashboard-link"><?php echo anchor('admin', lang('global:dashboard'), 'class="top-link' . (!$this->module > '' ? ' current' : '').'"');?></li>
 	
@@ -99,7 +99,7 @@
 		<?php endif; ?>
 
 		<?php if (array_key_exists('modules', $this->permissions) OR $this->current_user->group == 'admin'): ?>
-			<li><?php echo anchor('admin/addons', lang('cp_nav_addons'), 'class="top-link no-submenu' . (($this->module == 'modules') ? ' current"' : '"'));?></li>
+			<li><?php echo anchor('admin/addons', lang('cp_nav_addons'), 'class="top-link no-submenu' . (($this->module == 'addons') ? ' current"' : '"'));?></li>
 		<?php endif; ?>
 		
 		<?php
@@ -117,7 +117,7 @@
 				
 				<?php if($module_details['slug']): ?>
 					<li id="help-link">
-						<?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'modal')); ?>
+						<?php echo anchor('admin/help/'.$module_details['slug'], lang('help_label'), array('title' => lang('help_label').'->'.$module_details['name'], 'class' => 'pyro_modal')); ?>
 					</li>
 				<?php endif; ?>
 			</ul>
