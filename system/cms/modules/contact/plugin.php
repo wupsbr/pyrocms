@@ -257,7 +257,30 @@ class Plugin_Contact extends Plugin
 
 		$this->form_validation->set_rules($validation);
 
-		if ($this->input->post('contact-submit') && $this->form_validation->run())
+		// Check SMTP handshake for the email
+		$email = $this->input->post('email');
+
+		if ( $email !== false )
+		{
+			$this->load->library('smtp_validate');
+
+			$result = $this->smtp_validate->validate(array($this->input->post('email')), $this->settings->server_email);
+
+			if ( $result[$this->input->post('email')] === false )
+			{
+				$valid = false;
+			}
+			else
+			{
+				$valid = true;
+			}
+		}
+		else
+		{
+			$valid = true;
+		}
+
+		if ($this->input->post('contact-submit') && $this->form_validation->run() && $valid)
 		{
 			// maybe it's a bot?
 			if ($this->input->post('d0ntf1llth1s1n') !== ' ')
